@@ -1,0 +1,390 @@
+[0.000000] (-) TimerEvent: {}
+[0.000112] (chatter) JobQueued: {'identifier': 'chatter', 'dependencies': OrderedDict()}
+[0.000188] (my_chatter_msgs) JobQueued: {'identifier': 'my_chatter_msgs', 'dependencies': OrderedDict()}
+[0.000209] (my_chatter) JobQueued: {'identifier': 'my_chatter', 'dependencies': OrderedDict([('chatter', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter'), ('my_chatter_msgs', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs')])}
+[0.000235] (chatter) JobStarted: {'identifier': 'chatter'}
+[0.028652] (my_chatter_msgs) JobStarted: {'identifier': 'my_chatter_msgs'}
+[0.099401] (-) TimerEvent: {}
+[0.199571] (-) TimerEvent: {}
+[0.292330] (my_chatter_msgs) JobProgress: {'identifier': 'my_chatter_msgs', 'progress': 'cmake'}
+[0.297702] (my_chatter_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/my_chatter_msgs', '-DCMAKE_INSTALL_PREFIX=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs'], 'cwd': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs', 'env': OrderedDict([('ARCH', 'x86_64'), ('QT_SCALE_FACTOR', '1'), ('USER', 'ee106a-aac'), ('HOSTNAME', 'ros2'), ('XDG_SESSION_TYPE', 'x11'), ('MASTERDIR', '/home/ff/ee106a'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('XDG_CACHE_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.cache'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cc/ee106a/sp26/class/ee106a-aac'), ('OLDPWD', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge:appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('EE106_UR_ROBOT_IP', '192.168.1.103'), ('DISTROBOX_ENTER_PATH', '/usr/local/bin/distrobox-enter'), ('SYSTEMD_EXEC_PID', '446457'), ('NNTPSERVER', 'news.csua.berkeley.edu'), ('VISUAL', 'emacs'), ('XDG_STATE_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.local/state'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/34116/bus'), ('COLORTERM', 'truecolor'), ('container', 'podman'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/ff/ee106a/robot_workspaces/ur/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ee106a-aac'), ('MASTER', 'ee106a'), ('WINDOWID', '41955103'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERMINFO_DIRS', '/usr/share/terminfo:/run/host/usr/share/terminfo'), ('USERNAME', 'ee106a-aac'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', '7901'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/share/b/grading/bin:/home/ff/ee106a/bin:/home/ff/ee106a/bin/arch/x86_64:/share/b/grading/bin:/home/ff/ee106a/bin:/home/ff/ee106a/bin/arch/x86_64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/share/b/grading/bin:/share/b/grading/sbin:/share/b/runas/x86_64:/share/b/bin:/home/ff/ee106a/venvs/all:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/share/b/grading/bin:/share/b/grading/sbin:/share/b/runas/x86_64:/share/b/bin:/home/ff/ee106a/venvs/all'), ('SESSION_MANAGER', 'local/c105-9:@/tmp/.ICE-unix/446538,unix/c105-9:/tmp/.ICE-unix/446538'), ('OS', 'Linux'), ('XDG_RUNTIME_DIR', '/run/user/34116'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('XDG_DATA_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.local/share'), ('XDG_CONFIG_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.config'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/run/user/34116/gdm/Xauthority'), ('SSH_AUTH_SOCK', '/run/user/34116/keyring/ssh'), ('ROS_DOMAIN_ID', '29'), ('AMENT_PREFIX_PATH', '/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble'), ('SHELL', '/usr/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('EE106_UR_ROBOT_NAME', 'wall-e'), ('GDMSESSION', 'mate'), ('RUNAS', '/share/b/runas/x86_64'), ('GPG_AGENT_INFO', '/run/user/34116/gnupg/S.gpg-agent:0:1'), ('CONFIG_SHELL', '/usr/bin/ksh'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs'), ('EE106_ENV_SETUP', 'ur_ros2'), ('CONTAINER_ID', 'ros2'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/mate:/usr/share/mate:/usr/share/gnome:/home/cc/ee106a/sp26/class/ee106a-aac/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/usr/local/share:/usr/share'), ('PYTHONPATH', '/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('COLCON', '1'), ('MANPATH', '/usr/local/man:/usr/man:/usr/X11/man:/usr/local/man:/share/b/grading/man:/usr/local/man:/usr/man:/usr/X11/man:/usr/local/man:/share/b/grading/man:'), ('VTE_VERSION', '6800'), ('EDITOR', 'emacs'), ('QT_FONT_DPI', '122'), ('CMAKE_PREFIX_PATH', '/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble')]), 'shell': False}
+[0.306540] (-) TimerEvent: {}
+[0.341696] (my_chatter_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.406626] (-) TimerEvent: {}
+[0.486519] (my_chatter_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.488825] (my_chatter_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.490797] (my_chatter_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.506818] (-) TimerEvent: {}
+[0.513911] (my_chatter_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.606958] (-) TimerEvent: {}
+[0.663884] (chatter) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/chatter', 'build', '--build-base', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build', 'install', '--record', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/chatter', 'env': {'ARCH': 'x86_64', 'QT_SCALE_FACTOR': '1', 'USER': 'ee106a-aac', 'HOSTNAME': 'ros2', 'XDG_SESSION_TYPE': 'x11', 'MASTERDIR': '/home/ff/ee106a', 'COMPIZ_CONFIG_PROFILE': 'mate', 'XDG_CACHE_HOME': '/home/cc/ee106a/sp26/class/ee106a-aac/.cache', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/cc/ee106a/sp26/class/ee106a-aac', 'OLDPWD': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src', 'DESKTOP_SESSION': 'mate', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge:appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module', 'EE106_UR_ROBOT_IP': '192.168.1.103', 'DISTROBOX_ENTER_PATH': '/usr/local/bin/distrobox-enter', 'SYSTEMD_EXEC_PID': '446457', 'NNTPSERVER': 'news.csua.berkeley.edu', 'VISUAL': 'emacs', 'XDG_STATE_HOME': '/home/cc/ee106a/sp26/class/ee106a-aac/.local/state', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/34116/bus', 'COLORTERM': 'truecolor', 'container': 'podman', 'UBUNTU_MENUPROXY': '1', 'QT_QPA_PLATFORMTHEME': 'gtk2', 'COLCON_PREFIX_PATH': '/home/ff/ee106a/robot_workspaces/ur/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ee106a-aac', 'MASTER': 'ee106a', 'WINDOWID': '41955103', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERMINFO_DIRS': '/usr/share/terminfo:/run/host/usr/share/terminfo', 'USERNAME': 'ee106a-aac', 'TERM': 'xterm-256color', 'GTK_OVERLAY_SCROLLING': '0', 'XDG_SESSION_ID': '7901', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/share/b/grading/bin:/home/ff/ee106a/bin:/home/ff/ee106a/bin/arch/x86_64:/share/b/grading/bin:/home/ff/ee106a/bin:/home/ff/ee106a/bin/arch/x86_64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/share/b/grading/bin:/share/b/grading/sbin:/share/b/runas/x86_64:/share/b/bin:/home/ff/ee106a/venvs/all:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/share/b/grading/bin:/share/b/grading/sbin:/share/b/runas/x86_64:/share/b/bin:/home/ff/ee106a/venvs/all', 'SESSION_MANAGER': 'local/c105-9:@/tmp/.ICE-unix/446538,unix/c105-9:/tmp/.ICE-unix/446538', 'OS': 'Linux', 'XDG_RUNTIME_DIR': '/run/user/34116', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'MATE', 'XDG_DATA_HOME': '/home/cc/ee106a/sp26/class/ee106a-aac/.local/share', 'XDG_CONFIG_HOME': '/home/cc/ee106a/sp26/class/ee106a-aac/.config', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'mate', 'XAUTHORITY': '/run/user/34116/gdm/Xauthority', 'SSH_AUTH_SOCK': '/run/user/34116/keyring/ssh', 'ROS_DOMAIN_ID': '29', 'AMENT_PREFIX_PATH': '/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble', 'SHELL': '/usr/bin/bash', 'QT_ACCESSIBILITY': '1', 'EE106_UR_ROBOT_NAME': 'wall-e', 'GDMSESSION': 'mate', 'RUNAS': '/share/b/runas/x86_64', 'GPG_AGENT_INFO': '/run/user/34116/gnupg/S.gpg-agent:0:1', 'CONFIG_SHELL': '/usr/bin/ksh', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter', 'EE106_ENV_SETUP': 'ur_ros2', 'CONTAINER_ID': 'ros2', 'LC_ALL': 'C.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-mate:/etc/xdg', 'CLUTTER_IM_MODULE': 'ibus', 'XDG_DATA_DIRS': '/usr/share/mate:/usr/share/mate:/usr/share/gnome:/home/cc/ee106a/sp26/class/ee106a-aac/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/usr/local/share:/usr/share', 'PYTHONPATH': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'MATE_DESKTOP_SESSION_ID': 'this-is-deprecated', 'COLCON': '1', 'MANPATH': '/usr/local/man:/usr/man:/usr/X11/man:/usr/local/man:/share/b/grading/man:/usr/local/man:/usr/man:/usr/X11/man:/usr/local/man:/share/b/grading/man:', 'VTE_VERSION': '6800', 'EDITOR': 'emacs', 'QT_FONT_DPI': '122'}, 'shell': False}
+[0.707160] (-) TimerEvent: {}
+[0.807758] (-) TimerEvent: {}
+[0.847368] (my_chatter_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.889845] (chatter) StdoutLine: {'line': b'running egg_info\n'}
+[0.890860] (chatter) StdoutLine: {'line': b'writing ../../build/chatter/chatter.egg-info/PKG-INFO\n'}
+[0.894154] (chatter) StdoutLine: {'line': b'writing dependency_links to ../../build/chatter/chatter.egg-info/dependency_links.txt\n'}
+[0.896284] (chatter) StdoutLine: {'line': b'writing entry points to ../../build/chatter/chatter.egg-info/entry_points.txt\n'}
+[0.898346] (chatter) StdoutLine: {'line': b'writing requirements to ../../build/chatter/chatter.egg-info/requires.txt\n'}
+[0.900084] (chatter) StdoutLine: {'line': b'writing top-level names to ../../build/chatter/chatter.egg-info/top_level.txt\n'}
+[0.906563] (chatter) StdoutLine: {'line': b"reading manifest file '../../build/chatter/chatter.egg-info/SOURCES.txt'\n"}
+[0.907882] (-) TimerEvent: {}
+[0.909792] (chatter) StdoutLine: {'line': b"writing manifest file '../../build/chatter/chatter.egg-info/SOURCES.txt'\n"}
+[0.911291] (chatter) StdoutLine: {'line': b'running build\n'}
+[0.911497] (chatter) StdoutLine: {'line': b'running build_py\n'}
+[0.913890] (chatter) StdoutLine: {'line': b'running install\n'}
+[0.914407] (chatter) StdoutLine: {'line': b'running install_lib\n'}
+[0.919343] (chatter) StdoutLine: {'line': b'running install_data\n'}
+[0.920696] (chatter) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.923972] (chatter) StdoutLine: {'line': b"removing '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[0.929586] (chatter) StdoutLine: {'line': b'Copying ../../build/chatter/chatter.egg-info to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter-0.0.0-py3.10.egg-info\n'}
+[0.953566] (chatter) StdoutLine: {'line': b'running install_scripts\n'}
+[0.970511] (chatter) StdoutLine: {'line': b'Installing listener script to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/chatter\n'}
+[0.972853] (chatter) StdoutLine: {'line': b'Installing talker script to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/chatter\n'}
+[0.975358] (chatter) StdoutLine: {'line': b"writing list of installed files to '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/install.log'\n"}
+[0.993164] (chatter) CommandEnded: {'returncode': 0}
+[1.008257] (-) TimerEvent: {}
+[1.037364] (chatter) JobEnded: {'identifier': 'chatter', 'rc': 0}
+[1.108424] (-) TimerEvent: {}
+[1.208652] (-) TimerEvent: {}
+[1.309111] (-) TimerEvent: {}
+[1.320140] (my_chatter_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.409320] (-) TimerEvent: {}
+[1.509826] (-) TimerEvent: {}
+[1.610234] (-) TimerEvent: {}
+[1.710549] (-) TimerEvent: {}
+[1.810970] (-) TimerEvent: {}
+[1.911438] (-) TimerEvent: {}
+[2.007835] (my_chatter_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.011545] (-) TimerEvent: {}
+[2.071885] (my_chatter_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[2.080118] (my_chatter_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[2.111675] (-) TimerEvent: {}
+[2.177927] (my_chatter_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[2.178421] (my_chatter_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.178581] (my_chatter_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[2.178724] (my_chatter_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[2.211855] (-) TimerEvent: {}
+[2.236793] (my_chatter_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[2.312102] (-) TimerEvent: {}
+[2.412477] (-) TimerEvent: {}
+[2.433340] (my_chatter_msgs) StdoutLine: {'line': b'-- Found rosidl_default_runtime: 1.2.0 (/opt/ros/humble/share/rosidl_default_runtime/cmake)\n'}
+[2.449601] (my_chatter_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.512705] (-) TimerEvent: {}
+[2.613170] (-) TimerEvent: {}
+[2.694250] (my_chatter_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.713397] (-) TimerEvent: {}
+[2.717010] (my_chatter_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.804964] (my_chatter_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.813475] (-) TimerEvent: {}
+[2.913793] (-) TimerEvent: {}
+[3.014089] (-) TimerEvent: {}
+[3.114431] (-) TimerEvent: {}
+[3.214760] (-) TimerEvent: {}
+[3.315067] (-) TimerEvent: {}
+[3.415381] (-) TimerEvent: {}
+[3.515752] (-) TimerEvent: {}
+[3.522413] (my_chatter_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[3.615881] (-) TimerEvent: {}
+[3.673543] (my_chatter_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs\n'}
+[3.681330] (my_chatter_msgs) CommandEnded: {'returncode': 0}
+[3.683029] (my_chatter_msgs) JobProgress: {'identifier': 'my_chatter_msgs', 'progress': 'build'}
+[3.685270] (my_chatter_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs', '--', '-j32', '-l32'], 'cwd': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs', 'env': OrderedDict([('ARCH', 'x86_64'), ('QT_SCALE_FACTOR', '1'), ('USER', 'ee106a-aac'), ('HOSTNAME', 'ros2'), ('XDG_SESSION_TYPE', 'x11'), ('MASTERDIR', '/home/ff/ee106a'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('XDG_CACHE_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.cache'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cc/ee106a/sp26/class/ee106a-aac'), ('OLDPWD', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge:appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('EE106_UR_ROBOT_IP', '192.168.1.103'), ('DISTROBOX_ENTER_PATH', '/usr/local/bin/distrobox-enter'), ('SYSTEMD_EXEC_PID', '446457'), ('NNTPSERVER', 'news.csua.berkeley.edu'), ('VISUAL', 'emacs'), ('XDG_STATE_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.local/state'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/34116/bus'), ('COLORTERM', 'truecolor'), ('container', 'podman'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/ff/ee106a/robot_workspaces/ur/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ee106a-aac'), ('MASTER', 'ee106a'), ('WINDOWID', '41955103'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERMINFO_DIRS', '/usr/share/terminfo:/run/host/usr/share/terminfo'), ('USERNAME', 'ee106a-aac'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', '7901'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/share/b/grading/bin:/home/ff/ee106a/bin:/home/ff/ee106a/bin/arch/x86_64:/share/b/grading/bin:/home/ff/ee106a/bin:/home/ff/ee106a/bin/arch/x86_64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/share/b/grading/bin:/share/b/grading/sbin:/share/b/runas/x86_64:/share/b/bin:/home/ff/ee106a/venvs/all:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/share/b/grading/bin:/share/b/grading/sbin:/share/b/runas/x86_64:/share/b/bin:/home/ff/ee106a/venvs/all'), ('SESSION_MANAGER', 'local/c105-9:@/tmp/.ICE-unix/446538,unix/c105-9:/tmp/.ICE-unix/446538'), ('OS', 'Linux'), ('XDG_RUNTIME_DIR', '/run/user/34116'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('XDG_DATA_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.local/share'), ('XDG_CONFIG_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.config'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/run/user/34116/gdm/Xauthority'), ('SSH_AUTH_SOCK', '/run/user/34116/keyring/ssh'), ('ROS_DOMAIN_ID', '29'), ('AMENT_PREFIX_PATH', '/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble'), ('SHELL', '/usr/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('EE106_UR_ROBOT_NAME', 'wall-e'), ('GDMSESSION', 'mate'), ('RUNAS', '/share/b/runas/x86_64'), ('GPG_AGENT_INFO', '/run/user/34116/gnupg/S.gpg-agent:0:1'), ('CONFIG_SHELL', '/usr/bin/ksh'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs'), ('EE106_ENV_SETUP', 'ur_ros2'), ('CONTAINER_ID', 'ros2'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/mate:/usr/share/mate:/usr/share/gnome:/home/cc/ee106a/sp26/class/ee106a-aac/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/usr/local/share:/usr/share'), ('PYTHONPATH', '/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('COLCON', '1'), ('MANPATH', '/usr/local/man:/usr/man:/usr/X11/man:/usr/local/man:/share/b/grading/man:/usr/local/man:/usr/man:/usr/X11/man:/usr/local/man:/share/b/grading/man:'), ('VTE_VERSION', '6800'), ('EDITOR', 'emacs'), ('QT_FONT_DPI', '122'), ('CMAKE_PREFIX_PATH', '/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble')]), 'shell': False}
+[3.715958] (-) TimerEvent: {}
+[3.816265] (-) TimerEvent: {}
+[3.856114] (my_chatter_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[3.894233] (my_chatter_msgs) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.911879] (my_chatter_msgs) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_copy_my_chatter_msgs\n'}
+[3.916317] (-) TimerEvent: {}
+[4.016510] (-) TimerEvent: {}
+[4.102523] (my_chatter_msgs) StdoutLine: {'line': b'[  6%] Built target my_chatter_msgs__cpp\n'}
+[4.115624] (my_chatter_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/my_chatter_msgs__rosidl_generator_c.dir/rosidl_generator_c/my_chatter_msgs/msg/detail/timestamp_string__functions.c.o\x1b[0m\n'}
+[4.116568] (-) TimerEvent: {}
+[4.136294] (my_chatter_msgs) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.136408] (my_chatter_msgs) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.136671] (my_chatter_msgs) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[4.168604] (my_chatter_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[4.169754] (my_chatter_msgs) StdoutLine: {'line': b'creating my_chatter_msgs.egg-info\n'}
+[4.170764] (my_chatter_msgs) StdoutLine: {'line': b'writing my_chatter_msgs.egg-info/PKG-INFO\n'}
+[4.172994] (my_chatter_msgs) StdoutLine: {'line': b'writing dependency_links to my_chatter_msgs.egg-info/dependency_links.txt\n'}
+[4.176041] (my_chatter_msgs) StdoutLine: {'line': b'writing top-level names to my_chatter_msgs.egg-info/top_level.txt\n'}
+[4.177806] (my_chatter_msgs) StdoutLine: {'line': b"writing manifest file 'my_chatter_msgs.egg-info/SOURCES.txt'\n"}
+[4.184368] (my_chatter_msgs) StdoutLine: {'line': b"reading manifest file 'my_chatter_msgs.egg-info/SOURCES.txt'\n"}
+[4.186116] (my_chatter_msgs) StdoutLine: {'line': b"writing manifest file 'my_chatter_msgs.egg-info/SOURCES.txt'\n"}
+[4.211393] (my_chatter_msgs) StdoutLine: {'line': b'[ 19%] Built target ament_cmake_python_build_my_chatter_msgs_egg\n'}
+[4.216635] (-) TimerEvent: {}
+[4.221261] (my_chatter_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libmy_chatter_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[4.269154] (my_chatter_msgs) StdoutLine: {'line': b'[ 22%] Built target my_chatter_msgs__rosidl_generator_c\n'}
+[4.299447] (my_chatter_msgs) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.301145] (my_chatter_msgs) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[4.301217] (my_chatter_msgs) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.316710] (-) TimerEvent: {}
+[4.347787] (my_chatter_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/my_chatter_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_chatter_msgs/msg/timestamp_string__type_support.cpp.o\x1b[0m\n'}
+[4.386630] (my_chatter_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/my_chatter_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_chatter_msgs/msg/detail/timestamp_string__type_support.cpp.o\x1b[0m\n'}
+[4.386768] (my_chatter_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/my_chatter_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_chatter_msgs/msg/detail/dds_fastrtps/timestamp_string__type_support.cpp.o\x1b[0m\n'}
+[4.416783] (-) TimerEvent: {}
+[4.516992] (-) TimerEvent: {}
+[4.522966] (my_chatter_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/my_chatter_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_chatter_msgs/msg/timestamp_string__type_support.cpp.o\x1b[0m\n'}
+[4.535059] (my_chatter_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/my_chatter_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_chatter_msgs/msg/detail/timestamp_string__type_support.c.o\x1b[0m\n'}
+[4.545477] (my_chatter_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/my_chatter_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_chatter_msgs/msg/detail/timestamp_string__type_support_c.cpp.o\x1b[0m\n'}
+[4.572224] (my_chatter_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library libmy_chatter_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[4.590705] (my_chatter_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking C shared library libmy_chatter_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[4.616282] (my_chatter_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libmy_chatter_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[4.617097] (-) TimerEvent: {}
+[4.636390] (my_chatter_msgs) StdoutLine: {'line': b'[ 61%] Built target my_chatter_msgs__rosidl_typesupport_c\n'}
+[4.641880] (my_chatter_msgs) StdoutLine: {'line': b'[ 61%] Built target my_chatter_msgs__rosidl_typesupport_introspection_c\n'}
+[4.671970] (my_chatter_msgs) StdoutLine: {'line': b'[ 61%] Built target my_chatter_msgs__rosidl_typesupport_cpp\n'}
+[4.717326] (-) TimerEvent: {}
+[4.718726] (my_chatter_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libmy_chatter_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[4.731244] (my_chatter_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library libmy_chatter_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[4.801026] (my_chatter_msgs) StdoutLine: {'line': b'[ 67%] Built target my_chatter_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[4.801528] (my_chatter_msgs) StdoutLine: {'line': b'[ 67%] Built target my_chatter_msgs__rosidl_typesupport_introspection_cpp\n'}
+[4.817378] (-) TimerEvent: {}
+[4.839815] (my_chatter_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libmy_chatter_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[4.917646] (-) TimerEvent: {}
+[4.960657] (my_chatter_msgs) StdoutLine: {'line': b'[ 70%] Built target my_chatter_msgs__rosidl_typesupport_fastrtps_c\n'}
+[5.017831] (-) TimerEvent: {}
+[5.029185] (my_chatter_msgs) StdoutLine: {'line': b'[ 70%] Built target my_chatter_msgs\n'}
+[5.104374] (my_chatter_msgs) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[5.117918] (-) TimerEvent: {}
+[5.218379] (-) TimerEvent: {}
+[5.318711] (-) TimerEvent: {}
+[5.367326] (my_chatter_msgs) StdoutLine: {'line': b'[ 74%] Built target my_chatter_msgs__py\n'}
+[5.418864] (-) TimerEvent: {}
+[5.447567] (my_chatter_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/my_chatter_msgs__rosidl_generator_py.dir/rosidl_generator_py/my_chatter_msgs/msg/_timestamp_string_s.c.o\x1b[0m\n'}
+[5.519119] (-) TimerEvent: {}
+[5.612656] (my_chatter_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/my_chatter_msgs/libmy_chatter_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[5.619234] (-) TimerEvent: {}
+[5.719723] (-) TimerEvent: {}
+[5.720304] (my_chatter_msgs) StdoutLine: {'line': b'[ 80%] Built target my_chatter_msgs__rosidl_generator_py\n'}
+[5.818905] (my_chatter_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/my_chatter_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/my_chatter_msgs/_my_chatter_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[5.819779] (-) TimerEvent: {}
+[5.824841] (my_chatter_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/my_chatter_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/my_chatter_msgs/_my_chatter_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[5.824969] (my_chatter_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/my_chatter_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/my_chatter_msgs/_my_chatter_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[5.919969] (-) TimerEvent: {}
+[5.945362] (my_chatter_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.951176] (my_chatter_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.951239] (my_chatter_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.007224] (my_chatter_msgs) StdoutLine: {'line': b'[100%] Built target my_chatter_msgs__rosidl_typesupport_c__pyext\n'}
+[6.020058] (-) TimerEvent: {}
+[6.033584] (my_chatter_msgs) StdoutLine: {'line': b'[100%] Built target my_chatter_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[6.035963] (my_chatter_msgs) StdoutLine: {'line': b'[100%] Built target my_chatter_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[6.090827] (my_chatter_msgs) CommandEnded: {'returncode': 0}
+[6.094542] (my_chatter_msgs) JobProgress: {'identifier': 'my_chatter_msgs', 'progress': 'install'}
+[6.120142] (-) TimerEvent: {}
+[6.122734] (my_chatter_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs'], 'cwd': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs', 'env': OrderedDict([('ARCH', 'x86_64'), ('QT_SCALE_FACTOR', '1'), ('USER', 'ee106a-aac'), ('HOSTNAME', 'ros2'), ('XDG_SESSION_TYPE', 'x11'), ('MASTERDIR', '/home/ff/ee106a'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('XDG_CACHE_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.cache'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cc/ee106a/sp26/class/ee106a-aac'), ('OLDPWD', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge:appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('EE106_UR_ROBOT_IP', '192.168.1.103'), ('DISTROBOX_ENTER_PATH', '/usr/local/bin/distrobox-enter'), ('SYSTEMD_EXEC_PID', '446457'), ('NNTPSERVER', 'news.csua.berkeley.edu'), ('VISUAL', 'emacs'), ('XDG_STATE_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.local/state'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/34116/bus'), ('COLORTERM', 'truecolor'), ('container', 'podman'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/ff/ee106a/robot_workspaces/ur/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ee106a-aac'), ('MASTER', 'ee106a'), ('WINDOWID', '41955103'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERMINFO_DIRS', '/usr/share/terminfo:/run/host/usr/share/terminfo'), ('USERNAME', 'ee106a-aac'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', '7901'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/share/b/grading/bin:/home/ff/ee106a/bin:/home/ff/ee106a/bin/arch/x86_64:/share/b/grading/bin:/home/ff/ee106a/bin:/home/ff/ee106a/bin/arch/x86_64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/share/b/grading/bin:/share/b/grading/sbin:/share/b/runas/x86_64:/share/b/bin:/home/ff/ee106a/venvs/all:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/share/b/grading/bin:/share/b/grading/sbin:/share/b/runas/x86_64:/share/b/bin:/home/ff/ee106a/venvs/all'), ('SESSION_MANAGER', 'local/c105-9:@/tmp/.ICE-unix/446538,unix/c105-9:/tmp/.ICE-unix/446538'), ('OS', 'Linux'), ('XDG_RUNTIME_DIR', '/run/user/34116'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('XDG_DATA_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.local/share'), ('XDG_CONFIG_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.config'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/run/user/34116/gdm/Xauthority'), ('SSH_AUTH_SOCK', '/run/user/34116/keyring/ssh'), ('ROS_DOMAIN_ID', '29'), ('AMENT_PREFIX_PATH', '/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble'), ('SHELL', '/usr/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('EE106_UR_ROBOT_NAME', 'wall-e'), ('GDMSESSION', 'mate'), ('RUNAS', '/share/b/runas/x86_64'), ('GPG_AGENT_INFO', '/run/user/34116/gnupg/S.gpg-agent:0:1'), ('CONFIG_SHELL', '/usr/bin/ksh'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs'), ('EE106_ENV_SETUP', 'ur_ros2'), ('CONTAINER_ID', 'ros2'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/mate:/usr/share/mate:/usr/share/gnome:/home/cc/ee106a/sp26/class/ee106a-aac/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/usr/local/share:/usr/share'), ('PYTHONPATH', '/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('COLCON', '1'), ('MANPATH', '/usr/local/man:/usr/man:/usr/X11/man:/usr/local/man:/share/b/grading/man:/usr/local/man:/usr/man:/usr/X11/man:/usr/local/man:/share/b/grading/man:'), ('VTE_VERSION', '6800'), ('EDITOR', 'emacs'), ('QT_FONT_DPI', '122'), ('CMAKE_PREFIX_PATH', '/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble')]), 'shell': False}
+[6.151265] (my_chatter_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.157164] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/rosidl_interfaces/my_chatter_msgs\n'}
+[6.163570] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs\n'}
+[6.169669] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg\n'}
+[6.176158] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/timestamp_string.h\n'}
+[6.182549] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[6.188758] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail\n'}
+[6.194933] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__functions.c\n'}
+[6.201718] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__functions.h\n'}
+[6.207909] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__struct.h\n'}
+[6.213920] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__type_support.h\n'}
+[6.220212] (-) TimerEvent: {}
+[6.225997] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/library_path.sh\n'}
+[6.232521] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/library_path.dsv\n'}
+[6.242445] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_generator_c.so\n'}
+[6.252946] (my_chatter_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_generator_c.so" to ""\n'}
+[6.253770] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs\n'}
+[6.255332] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg\n'}
+[6.257101] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail\n'}
+[6.258860] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__rosidl_typesupport_fastrtps_c.h\n'}
+[6.265763] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[6.273290] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[6.284301] (my_chatter_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[6.284849] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs\n'}
+[6.286432] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg\n'}
+[6.288112] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail\n'}
+[6.289714] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__rosidl_typesupport_introspection_c.h\n'}
+[6.296391] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__type_support.c\n'}
+[6.303632] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[6.310918] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_introspection_c.so\n'}
+[6.320300] (-) TimerEvent: {}
+[6.322208] (my_chatter_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[6.323746] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_c.so\n'}
+[6.334509] (my_chatter_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_c.so" to ""\n'}
+[6.334939] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs\n'}
+[6.336812] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg\n'}
+[6.338494] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/timestamp_string.hpp\n'}
+[6.345262] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[6.352682] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail\n'}
+[6.354801] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__builder.hpp\n'}
+[6.362434] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__struct.hpp\n'}
+[6.368905] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__traits.hpp\n'}
+[6.376112] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__type_support.hpp\n'}
+[6.382758] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs\n'}
+[6.384430] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg\n'}
+[6.386426] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail\n'}
+[6.388127] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.394965] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/dds_fastrtps\n'}
+[6.401619] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[6.410236] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[6.420381] (-) TimerEvent: {}
+[6.422422] (my_chatter_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[6.423458] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs\n'}
+[6.425875] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg\n'}
+[6.427474] (my_chatter_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail\n'}
+[6.429220] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.435797] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__type_support.cpp\n'}
+[6.442591] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[6.454493] (my_chatter_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[6.456039] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_cpp.so\n'}
+[6.467789] (my_chatter_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[6.469294] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/pythonpath.sh\n'}
+[6.476260] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/pythonpath.dsv\n'}
+[6.482276] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs-0.0.0-py3.10.egg-info\n'}
+[6.490475] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[6.497361] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[6.503669] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[6.510208] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[6.516797] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs\n'}
+[6.520513] (-) TimerEvent: {}
+[6.523468] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/__init__.py\n'}
+[6.529620] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/msg\n'}
+[6.536051] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/msg/_timestamp_string.py\n'}
+[6.544666] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/msg/_timestamp_string_s.c\n'}
+[6.551737] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/msg/__init__.py\n'}
+[6.559229] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/_my_chatter_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[6.566890] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/_my_chatter_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[6.575054] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/_my_chatter_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[6.582060] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/libmy_chatter_msgs__rosidl_generator_py.so\n'}
+[6.590087] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.598648] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.607272] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.620629] (-) TimerEvent: {}
+[6.710463] (my_chatter_msgs) StdoutLine: {'line': b"Listing '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs'...\n"}
+[6.710732] (my_chatter_msgs) StdoutLine: {'line': b"Compiling '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/__init__.py'...\n"}
+[6.710875] (my_chatter_msgs) StdoutLine: {'line': b"Listing '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/msg'...\n"}
+[6.710987] (my_chatter_msgs) StdoutLine: {'line': b"Compiling '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/msg/__init__.py'...\n"}
+[6.711124] (my_chatter_msgs) StdoutLine: {'line': b"Compiling '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/msg/_timestamp_string.py'...\n"}
+[6.720699] (-) TimerEvent: {}
+[6.722800] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.733632] (my_chatter_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[6.737859] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.749355] (my_chatter_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[6.752945] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.763550] (my_chatter_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[6.765119] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_generator_py.so\n'}
+[6.775914] (my_chatter_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_generator_py.so" to ""\n'}
+[6.782283] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/msg/TimestampString.idl\n'}
+[6.788953] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/msg/TimestampString.msg\n'}
+[6.800439] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/package_run_dependencies/my_chatter_msgs\n'}
+[6.812273] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/parent_prefix_path/my_chatter_msgs\n'}
+[6.819268] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/ament_prefix_path.sh\n'}
+[6.820788] (-) TimerEvent: {}
+[6.825669] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/ament_prefix_path.dsv\n'}
+[6.832334] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/path.sh\n'}
+[6.838549] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/path.dsv\n'}
+[6.844784] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.bash\n'}
+[6.852376] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.sh\n'}
+[6.859855] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.zsh\n'}
+[6.866928] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.dsv\n'}
+[6.873697] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.dsv\n'}
+[6.885651] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/packages/my_chatter_msgs\n'}
+[6.896404] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_generator_cExport.cmake\n'}
+[6.904525] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[6.912284] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[6.919921] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[6.920865] (-) TimerEvent: {}
+[6.927940] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[6.936200] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[6.943848] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_cExport.cmake\n'}
+[6.952213] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[6.960341] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_generator_cppExport.cmake\n'}
+[6.968031] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[6.975569] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[6.983692] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[6.991530] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[6.999180] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[7.007153] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[7.014986] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_generator_pyExport.cmake\n'}
+[7.020952] (-) TimerEvent: {}
+[7.022838] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[7.030984] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[7.037790] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[7.043991] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[7.050896] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[7.058163] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[7.065163] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[7.071837] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[7.078779] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgsConfig.cmake\n'}
+[7.086308] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgsConfig-version.cmake\n'}
+[7.093548] (my_chatter_msgs) StdoutLine: {'line': b'-- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.xml\n'}
+[7.107453] (my_chatter_msgs) CommandEnded: {'returncode': 0}
+[7.121188] (-) TimerEvent: {}
+[7.214395] (my_chatter_msgs) JobEnded: {'identifier': 'my_chatter_msgs', 'rc': 0}
+[7.221928] (-) TimerEvent: {}
+[7.222064] (my_chatter) JobStarted: {'identifier': 'my_chatter'}
+[7.271434] (my_chatter) JobProgress: {'identifier': 'my_chatter', 'progress': 'cmake'}
+[7.279733] (my_chatter) Command: {'cmd': ['/usr/bin/cmake', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/my_chatter', '-DCMAKE_INSTALL_PREFIX=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter'], 'cwd': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter', 'env': OrderedDict([('ARCH', 'x86_64'), ('QT_SCALE_FACTOR', '1'), ('USER', 'ee106a-aac'), ('HOSTNAME', 'ros2'), ('XDG_SESSION_TYPE', 'x11'), ('MASTERDIR', '/home/ff/ee106a'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('XDG_CACHE_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.cache'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cc/ee106a/sp26/class/ee106a-aac'), ('OLDPWD', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge:appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('EE106_UR_ROBOT_IP', '192.168.1.103'), ('DISTROBOX_ENTER_PATH', '/usr/local/bin/distrobox-enter'), ('SYSTEMD_EXEC_PID', '446457'), ('NNTPSERVER', 'news.csua.berkeley.edu'), ('VISUAL', 'emacs'), ('XDG_STATE_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.local/state'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/34116/bus'), ('COLORTERM', 'truecolor'), ('container', 'podman'), ('UBUNTU_MENUPROXY', '1'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('COLCON_PREFIX_PATH', '/home/ff/ee106a/robot_workspaces/ur/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ee106a-aac'), ('MASTER', 'ee106a'), ('WINDOWID', '41955103'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERMINFO_DIRS', '/usr/share/terminfo:/run/host/usr/share/terminfo'), ('USERNAME', 'ee106a-aac'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', '7901'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/share/b/grading/bin:/home/ff/ee106a/bin:/home/ff/ee106a/bin/arch/x86_64:/share/b/grading/bin:/home/ff/ee106a/bin:/home/ff/ee106a/bin/arch/x86_64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/share/b/grading/bin:/share/b/grading/sbin:/share/b/runas/x86_64:/share/b/bin:/home/ff/ee106a/venvs/all:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/share/b/grading/bin:/share/b/grading/sbin:/share/b/runas/x86_64:/share/b/bin:/home/ff/ee106a/venvs/all'), ('SESSION_MANAGER', 'local/c105-9:@/tmp/.ICE-unix/446538,unix/c105-9:/tmp/.ICE-unix/446538'), ('OS', 'Linux'), ('XDG_RUNTIME_DIR', '/run/user/34116'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('XDG_DATA_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.local/share'), ('XDG_CONFIG_HOME', '/home/cc/ee106a/sp26/class/ee106a-aac/.config'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/run/user/34116/gdm/Xauthority'), ('SSH_AUTH_SOCK', '/run/user/34116/keyring/ssh'), ('ROS_DOMAIN_ID', '29'), ('AMENT_PREFIX_PATH', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble'), ('SHELL', '/usr/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('EE106_UR_ROBOT_NAME', 'wall-e'), ('GDMSESSION', 'mate'), ('RUNAS', '/share/b/runas/x86_64'), ('GPG_AGENT_INFO', '/run/user/34116/gnupg/S.gpg-agent:0:1'), ('CONFIG_SHELL', '/usr/bin/ksh'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter'), ('EE106_ENV_SETUP', 'ur_ros2'), ('CONTAINER_ID', 'ros2'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/mate:/usr/share/mate:/usr/share/gnome:/home/cc/ee106a/sp26/class/ee106a-aac/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/usr/local/share:/usr/share'), ('PYTHONPATH', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('COLCON', '1'), ('MANPATH', '/usr/local/man:/usr/man:/usr/X11/man:/usr/local/man:/share/b/grading/man:/usr/local/man:/usr/man:/usr/X11/man:/usr/local/man:/share/b/grading/man:'), ('VTE_VERSION', '6800'), ('EDITOR', 'emacs'), ('QT_FONT_DPI', '122'), ('CMAKE_PREFIX_PATH', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble')]), 'shell': False}
+[7.322049] (-) TimerEvent: {}
+[7.422318] (-) TimerEvent: {}
+[7.494770] (my_chatter) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[7.522387] (-) TimerEvent: {}
+[7.622661] (-) TimerEvent: {}
+[7.659594] (my_chatter) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[7.691198] (my_chatter) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[7.722730] (-) TimerEvent: {}
+[7.823000] (-) TimerEvent: {}
+[7.923317] (-) TimerEvent: {}
+[7.992334] (my_chatter) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[8.012882] (my_chatter) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[8.013902] (my_chatter) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[8.015671] (my_chatter) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[8.023511] (-) TimerEvent: {}
+[8.034278] (my_chatter) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[8.123611] (-) TimerEvent: {}
+[8.223909] (-) TimerEvent: {}
+[8.324207] (-) TimerEvent: {}
+[8.327244] (my_chatter) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[8.350104] (my_chatter) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[8.351064] (my_chatter) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[8.352329] (my_chatter) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[8.374539] (my_chatter) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[8.424282] (-) TimerEvent: {}
+[8.524576] (-) TimerEvent: {}
+[8.624932] (-) TimerEvent: {}
+[8.717686] (my_chatter) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[8.725027] (-) TimerEvent: {}
+[8.825267] (-) TimerEvent: {}
+[8.925569] (-) TimerEvent: {}
+[8.977248] (my_chatter) StdoutLine: {'line': b'-- Found rclpy: 3.3.19 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[8.997301] (my_chatter) StdoutLine: {'line': b'-- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[9.025644] (-) TimerEvent: {}
+[9.125937] (-) TimerEvent: {}
+[9.148047] (my_chatter) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[9.172178] (my_chatter) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[9.200993] (my_chatter) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[9.226094] (-) TimerEvent: {}
+[9.245057] (my_chatter) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[9.294563] (my_chatter) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[9.326186] (-) TimerEvent: {}
+[9.426428] (-) TimerEvent: {}
+[9.526709] (-) TimerEvent: {}
+[9.559341] (my_chatter) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:12 (find_package):\n'}
+[9.559635] (my_chatter) StderrLine: {'line': b'  By not providing "Findchatter.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[9.559744] (my_chatter) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "chatter", but\n'}
+[9.559833] (my_chatter) StderrLine: {'line': b'  CMake did not find one.\n'}
+[9.559909] (my_chatter) StderrLine: {'line': b'\n'}
+[9.559986] (my_chatter) StderrLine: {'line': b'  Could not find a package configuration file provided by "chatter" with any\n'}
+[9.560085] (my_chatter) StderrLine: {'line': b'  of the following names:\n'}
+[9.560158] (my_chatter) StderrLine: {'line': b'\n'}
+[9.560229] (my_chatter) StderrLine: {'line': b'    chatterConfig.cmake\n'}
+[9.560308] (my_chatter) StderrLine: {'line': b'    chatter-config.cmake\n'}
+[9.560380] (my_chatter) StderrLine: {'line': b'\n'}
+[9.560450] (my_chatter) StderrLine: {'line': b'  Add the installation prefix of "chatter" to CMAKE_PREFIX_PATH or set\n'}
+[9.560520] (my_chatter) StderrLine: {'line': b'  "chatter_DIR" to a directory containing one of the above files.  If\n'}
+[9.560591] (my_chatter) StderrLine: {'line': b'  "chatter" provides a separate development package or SDK, be sure it has\n'}
+[9.560660] (my_chatter) StderrLine: {'line': b'  been installed.\n'}
+[9.560731] (my_chatter) StderrLine: {'line': b'\n'}
+[9.560800] (my_chatter) StderrLine: {'line': b'\x1b[0m\n'}
+[9.561193] (my_chatter) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[9.561465] (my_chatter) StdoutLine: {'line': b'See also "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/CMakeFiles/CMakeOutput.log".\n'}
+[9.578147] (my_chatter) CommandEnded: {'returncode': 1}
+[9.627033] (-) TimerEvent: {}
+[9.646411] (my_chatter) JobEnded: {'identifier': 'my_chatter', 'rc': 1}
+[9.656943] (-) EventReactorShutdown: {}

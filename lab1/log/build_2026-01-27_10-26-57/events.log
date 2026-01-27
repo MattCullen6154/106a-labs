@@ -1,0 +1,57 @@
+[0.000000] (-) TimerEvent: {}
+[0.000101] (chatter) JobQueued: {'identifier': 'chatter', 'dependencies': OrderedDict()}
+[0.000135] (chatter) JobStarted: {'identifier': 'chatter'}
+[0.099610] (-) TimerEvent: {}
+[0.199913] (-) TimerEvent: {}
+[0.300282] (-) TimerEvent: {}
+[0.400656] (-) TimerEvent: {}
+[0.501142] (-) TimerEvent: {}
+[0.601453] (-) TimerEvent: {}
+[0.695205] (chatter) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/chatter', 'build', '--build-base', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build', 'install', '--record', '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/chatter', 'env': {'ARCH': 'x86_64', 'QT_SCALE_FACTOR': '1', 'USER': 'ee106a-aac', 'HOSTNAME': 'ros2', 'XDG_SESSION_TYPE': 'x11', 'MASTERDIR': '/home/ff/ee106a', 'COMPIZ_CONFIG_PROFILE': 'mate', 'XDG_CACHE_HOME': '/home/cc/ee106a/sp26/class/ee106a-aac/.cache', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/cc/ee106a/sp26/class/ee106a-aac', 'OLDPWD': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces', 'DESKTOP_SESSION': 'mate', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge:appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module', 'EE106_UR_ROBOT_IP': '192.168.1.103', 'DISTROBOX_ENTER_PATH': '/usr/local/bin/distrobox-enter', 'SYSTEMD_EXEC_PID': '446457', 'NNTPSERVER': 'news.csua.berkeley.edu', 'VISUAL': 'emacs', 'XDG_STATE_HOME': '/home/cc/ee106a/sp26/class/ee106a-aac/.local/state', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/34116/bus', 'COLORTERM': 'truecolor', 'container': 'podman', 'UBUNTU_MENUPROXY': '1', 'QT_QPA_PLATFORMTHEME': 'gtk2', 'COLCON_PREFIX_PATH': '/home/ff/ee106a/robot_workspaces/ur/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ee106a-aac', 'MASTER': 'ee106a', 'WINDOWID': '41963270', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERMINFO_DIRS': '/usr/share/terminfo:/run/host/usr/share/terminfo', 'USERNAME': 'ee106a-aac', 'TERM': 'xterm-256color', 'GTK_OVERLAY_SCROLLING': '0', 'XDG_SESSION_ID': '7901', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/share/b/grading/bin:/home/ff/ee106a/bin:/home/ff/ee106a/bin/arch/x86_64:/share/b/grading/bin:/home/ff/ee106a/bin:/home/ff/ee106a/bin/arch/x86_64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/share/b/grading/bin:/share/b/grading/sbin:/share/b/runas/x86_64:/share/b/bin:/home/ff/ee106a/venvs/all:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/share/b/grading/bin:/share/b/grading/sbin:/share/b/runas/x86_64:/share/b/bin:/home/ff/ee106a/venvs/all', 'SESSION_MANAGER': 'local/c105-9:@/tmp/.ICE-unix/446538,unix/c105-9:/tmp/.ICE-unix/446538', 'OS': 'Linux', 'XDG_RUNTIME_DIR': '/run/user/34116', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'MATE', 'XDG_DATA_HOME': '/home/cc/ee106a/sp26/class/ee106a-aac/.local/share', 'XDG_CONFIG_HOME': '/home/cc/ee106a/sp26/class/ee106a-aac/.config', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'mate', 'XAUTHORITY': '/run/user/34116/gdm/Xauthority', 'SSH_AUTH_SOCK': '/run/user/34116/keyring/ssh', 'ROS_DOMAIN_ID': '29', 'AMENT_PREFIX_PATH': '/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble', 'SHELL': '/usr/bin/bash', 'QT_ACCESSIBILITY': '1', 'EE106_UR_ROBOT_NAME': 'wall-e', 'GDMSESSION': 'mate', 'RUNAS': '/share/b/runas/x86_64', 'GPG_AGENT_INFO': '/run/user/34116/gnupg/S.gpg-agent:0:1', 'CONFIG_SHELL': '/usr/bin/ksh', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter', 'EE106_ENV_SETUP': 'ur_ros2', 'CONTAINER_ID': 'ros2', 'LC_ALL': 'C.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-mate:/etc/xdg', 'CLUTTER_IM_MODULE': 'ibus', 'XDG_DATA_DIRS': '/usr/share/mate:/usr/share/mate:/usr/share/gnome:/home/cc/ee106a/sp26/class/ee106a-aac/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/usr/local/share:/usr/share', 'PYTHONPATH': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'MATE_DESKTOP_SESSION_ID': 'this-is-deprecated', 'COLCON': '1', 'MANPATH': '/usr/local/man:/usr/man:/usr/X11/man:/usr/local/man:/share/b/grading/man:/usr/local/man:/usr/man:/usr/X11/man:/usr/local/man:/share/b/grading/man:', 'VTE_VERSION': '6800', 'EDITOR': 'emacs', 'QT_FONT_DPI': '122'}, 'shell': False}
+[0.706912] (-) TimerEvent: {}
+[0.807255] (-) TimerEvent: {}
+[0.907462] (-) TimerEvent: {}
+[0.910523] (chatter) StdoutLine: {'line': b'running egg_info\n'}
+[0.911051] (chatter) StdoutLine: {'line': b'creating ../../build/chatter/chatter.egg-info\n'}
+[0.911915] (chatter) StdoutLine: {'line': b'writing ../../build/chatter/chatter.egg-info/PKG-INFO\n'}
+[0.914927] (chatter) StdoutLine: {'line': b'writing dependency_links to ../../build/chatter/chatter.egg-info/dependency_links.txt\n'}
+[0.916446] (chatter) StdoutLine: {'line': b'writing entry points to ../../build/chatter/chatter.egg-info/entry_points.txt\n'}
+[0.917769] (chatter) StdoutLine: {'line': b'writing requirements to ../../build/chatter/chatter.egg-info/requires.txt\n'}
+[0.918926] (chatter) StdoutLine: {'line': b'writing top-level names to ../../build/chatter/chatter.egg-info/top_level.txt\n'}
+[0.920638] (chatter) StdoutLine: {'line': b"writing manifest file '../../build/chatter/chatter.egg-info/SOURCES.txt'\n"}
+[0.928370] (chatter) StdoutLine: {'line': b"reading manifest file '../../build/chatter/chatter.egg-info/SOURCES.txt'\n"}
+[0.931433] (chatter) StdoutLine: {'line': b"writing manifest file '../../build/chatter/chatter.egg-info/SOURCES.txt'\n"}
+[0.932470] (chatter) StdoutLine: {'line': b'running build\n'}
+[0.932583] (chatter) StdoutLine: {'line': b'running build_py\n'}
+[0.933629] (chatter) StdoutLine: {'line': b'creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build\n'}
+[0.934415] (chatter) StdoutLine: {'line': b'creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib\n'}
+[0.935091] (chatter) StdoutLine: {'line': b'creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter\n'}
+[0.936281] (chatter) StdoutLine: {'line': b'copying chatter/__init__.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter\n'}
+[0.938633] (chatter) StdoutLine: {'line': b'copying chatter/publisher_member_function.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter\n'}
+[0.941438] (chatter) StdoutLine: {'line': b'copying chatter/subscriber_member_function.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter\n'}
+[0.944297] (chatter) StdoutLine: {'line': b'running install\n'}
+[0.945011] (chatter) StdoutLine: {'line': b'running install_lib\n'}
+[0.948414] (chatter) StdoutLine: {'line': b'creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter\n'}
+[0.949491] (chatter) StdoutLine: {'line': b'copying /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter/__init__.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter\n'}
+[0.952001] (chatter) StdoutLine: {'line': b'copying /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter/publisher_member_function.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter\n'}
+[0.955425] (chatter) StdoutLine: {'line': b'copying /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter/subscriber_member_function.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter\n'}
+[0.960750] (chatter) StdoutLine: {'line': b'byte-compiling /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter/__init__.py to __init__.cpython-310.pyc\n'}
+[0.964467] (chatter) StdoutLine: {'line': b'byte-compiling /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter/publisher_member_function.py to publisher_member_function.cpython-310.pyc\n'}
+[0.969516] (chatter) StdoutLine: {'line': b'byte-compiling /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter/subscriber_member_function.py to subscriber_member_function.cpython-310.pyc\n'}
+[0.973629] (chatter) StdoutLine: {'line': b'running install_data\n'}
+[0.974318] (chatter) StdoutLine: {'line': b'creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/ament_index\n'}
+[0.975140] (chatter) StdoutLine: {'line': b'creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/ament_index/resource_index\n'}
+[0.975834] (chatter) StdoutLine: {'line': b'creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/ament_index/resource_index/packages\n'}
+[0.977110] (chatter) StdoutLine: {'line': b'copying resource/chatter -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/ament_index/resource_index/packages\n'}
+[0.979577] (chatter) StdoutLine: {'line': b'copying package.xml -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter\n'}
+[0.982321] (chatter) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.987075] (chatter) StdoutLine: {'line': b'Copying ../../build/chatter/chatter.egg-info to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter-0.0.0-py3.10.egg-info\n'}
+[1.007533] (-) TimerEvent: {}
+[1.014461] (chatter) StdoutLine: {'line': b'running install_scripts\n'}
+[1.049179] (chatter) StdoutLine: {'line': b'Installing listener script to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/chatter\n'}
+[1.051491] (chatter) StdoutLine: {'line': b'Installing talker script to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/chatter\n'}
+[1.053668] (chatter) StdoutLine: {'line': b"writing list of installed files to '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/install.log'\n"}
+[1.070086] (chatter) CommandEnded: {'returncode': 0}
+[1.103845] (chatter) JobEnded: {'identifier': 'chatter', 'rc': 0}
+[1.109293] (-) TimerEvent: {}
+[1.109402] (-) EventReactorShutdown: {}

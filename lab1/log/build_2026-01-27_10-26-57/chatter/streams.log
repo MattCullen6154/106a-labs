@@ -1,0 +1,41 @@
+[0.707s] Invoking command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/chatter': PYTHONPATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/chatter build --build-base /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build install --record /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/install.log --single-version-externally-managed install_data
+[0.910s] running egg_info
+[0.911s] creating ../../build/chatter/chatter.egg-info
+[0.912s] writing ../../build/chatter/chatter.egg-info/PKG-INFO
+[0.915s] writing dependency_links to ../../build/chatter/chatter.egg-info/dependency_links.txt
+[0.916s] writing entry points to ../../build/chatter/chatter.egg-info/entry_points.txt
+[0.918s] writing requirements to ../../build/chatter/chatter.egg-info/requires.txt
+[0.919s] writing top-level names to ../../build/chatter/chatter.egg-info/top_level.txt
+[0.921s] writing manifest file '../../build/chatter/chatter.egg-info/SOURCES.txt'
+[0.928s] reading manifest file '../../build/chatter/chatter.egg-info/SOURCES.txt'
+[0.931s] writing manifest file '../../build/chatter/chatter.egg-info/SOURCES.txt'
+[0.932s] running build
+[0.932s] running build_py
+[0.934s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build
+[0.934s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib
+[0.935s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter
+[0.936s] copying chatter/__init__.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter
+[0.939s] copying chatter/publisher_member_function.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter
+[0.941s] copying chatter/subscriber_member_function.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter
+[0.944s] running install
+[0.945s] running install_lib
+[0.948s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter
+[0.949s] copying /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter/__init__.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter
+[0.952s] copying /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter/publisher_member_function.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter
+[0.955s] copying /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build/lib/chatter/subscriber_member_function.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter
+[0.961s] byte-compiling /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter/__init__.py to __init__.cpython-310.pyc
+[0.964s] byte-compiling /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter/publisher_member_function.py to publisher_member_function.cpython-310.pyc
+[0.969s] byte-compiling /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter/subscriber_member_function.py to subscriber_member_function.cpython-310.pyc
+[0.974s] running install_data
+[0.974s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/ament_index
+[0.975s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/ament_index/resource_index
+[0.976s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/ament_index/resource_index/packages
+[0.977s] copying resource/chatter -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/ament_index/resource_index/packages
+[0.979s] copying package.xml -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter
+[0.982s] running install_egg_info
+[0.987s] Copying ../../build/chatter/chatter.egg-info to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages/chatter-0.0.0-py3.10.egg-info
+[1.014s] running install_scripts
+[1.049s] Installing listener script to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/chatter
+[1.051s] Installing talker script to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/chatter
+[1.054s] writing list of installed files to '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/install.log'
+[1.070s] Invoked command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/chatter' returned '0': PYTHONPATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/chatter build --build-base /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build install --record /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/install.log --single-version-externally-managed install_data
