@@ -28,20 +28,17 @@ class MinimalPublisher(Node):
         super().__init__('minimal_publisher')
         
          # Here, we set that the node publishes message of type String (where did this type come from?), over a topic called "chatter_talk", and with queue size 10. The queue size limits the amount of queued messages if a subscriber doesn't receive them quickly enough.
-        self.publisher_ = self.create_publisher(String, 'chatter_talk', 10)
         
-        # We create a timer with a callback (a function that runs automatically when something happens so you don't have to constantly check if something has happened) 
-        timer_period = 0.5  # seconds
-        self.timer = self.create_timer(timer_period, self.timer_callback)
-        self.i = 0
-    
-    # Here we create a message with the counter value appended and publish it
-    def timer_callback(self):
+
+        self.publisher_ = self.create_publisher(String, 'chatter_talk', 10)
         msg = String()
-        msg.data = 'Hello World: %d' % self.i
+        message = input("Please enter a line of text and press <Enter>:\n")
+        #print(message)
+        clock = self.get_clock().now()
+        msg.data = f"Message: {message}, Sent at: {clock}, Received at: {clock}"
         self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: "%s"' % msg.data)
-        self.i += 1
+
+
 
 
 def main(args=None):

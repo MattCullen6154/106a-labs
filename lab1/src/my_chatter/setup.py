@@ -24,8 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'my_talker = py_pubsub.publisher_member_function:main',
-            'my_listener = py_pubsub.subscriber_member_function:main',
+            'my_talker = my_chatter.my_talker:main',
+            'my_listener = my_chatter.my_listener:main',
         ],
     },
 )
