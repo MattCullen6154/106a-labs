@@ -7,8 +7,6 @@
 
 import builtins  # noqa: E402, I100
 
-import math  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -63,12 +61,12 @@ class TimestampString(metaclass=Metaclass_TimestampString):
 
     _fields_and_field_types = {
         'message': 'string',
-        'timestamp': 'float',
+        'timestamp': 'uint32',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint32'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -76,7 +74,7 @@ class TimestampString(metaclass=Metaclass_TimestampString):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.message = kwargs.get('message', str())
-        self.timestamp = kwargs.get('timestamp', float())
+        self.timestamp = kwargs.get('timestamp', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -140,8 +138,8 @@ class TimestampString(metaclass=Metaclass_TimestampString):
     def timestamp(self, value):
         if __debug__:
             assert \
-                isinstance(value, float), \
-                "The 'timestamp' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'timestamp' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+                isinstance(value, int), \
+                "The 'timestamp' field must be of type 'int'"
+            assert value >= 0 and value < 4294967296, \
+                "The 'timestamp' field must be an unsigned integer in [0, 4294967295]"
         self._timestamp = value

@@ -55,7 +55,7 @@ static rosidl_typesupport_introspection_c__MessageMember my_chatter_msgs__msg__T
   },
   {
     "timestamp",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array

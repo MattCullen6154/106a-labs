@@ -8,7 +8,7 @@ module my_chatter_msgs {
     struct TimestampString {
       string message;
 
-      float timestamp;
+      uint32 timestamp;
     };
   };
 };

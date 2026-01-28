@@ -40,7 +40,7 @@ struct TimestampString_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->message = "";
-      this->timestamp = 0.0f;
+      this->timestamp = 0ul;
     }
   }
 
@@ -51,7 +51,7 @@ struct TimestampString_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->message = "";
-      this->timestamp = 0.0f;
+      this->timestamp = 0ul;
     }
   }
 
@@ -60,7 +60,7 @@ struct TimestampString_
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _message_type message;
   using _timestamp_type =
-    float;
+    uint32_t;
   _timestamp_type timestamp;
 
   // setters for named parameter idiom
@@ -71,7 +71,7 @@ struct TimestampString_
     return *this;
   }
   Type & set__timestamp(
-    const float & _arg)
+    const uint32_t & _arg)
   {
     this->timestamp = _arg;
     return *this;

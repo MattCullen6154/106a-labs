@@ -1,2 +1,2 @@
 string message
-float32 timestamp
+uint32 timestamp

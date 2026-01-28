@@ -57,7 +57,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember TimestampStri
   },
   {
     "timestamp",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT32,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array

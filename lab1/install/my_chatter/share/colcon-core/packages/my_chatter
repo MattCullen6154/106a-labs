@@ -1,1 +1,1 @@
-chatter:my_chatter_msgs:rclpy:std_msgs
+my_chatter_msgs:rclpy:std_msgs

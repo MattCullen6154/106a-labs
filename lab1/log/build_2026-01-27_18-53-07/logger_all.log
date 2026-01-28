@@ -1,0 +1,245 @@
+[0.241s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.241s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7e21b6bbde10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7e21b6cc2da0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7e21b6cc2da0>>, mixin_verb=('build',))
+[0.463s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.463s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.463s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.463s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.463s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.463s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.463s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.464s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(my_chatter) by extensions ['ignore', 'ignore_ament_install']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(my_chatter) by extension 'ignore'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(my_chatter) by extension 'ignore_ament_install'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(my_chatter) by extensions ['colcon_pkg']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(my_chatter) by extension 'colcon_pkg'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(my_chatter) by extensions ['colcon_meta']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(my_chatter) by extension 'colcon_meta'
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(my_chatter) by extensions ['ros']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(my_chatter) by extension 'ros'
+[0.480s] DEBUG:colcon.colcon_core.package_identification:Package 'my_chatter' with type 'ros.ament_python' and name 'my_chatter'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/chatter) by extensions ['ignore', 'ignore_ament_install']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/chatter) by extension 'ignore'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/chatter) by extension 'ignore_ament_install'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/chatter) by extensions ['colcon_pkg']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/chatter) by extension 'colcon_pkg'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/chatter) by extensions ['colcon_meta']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/chatter) by extension 'colcon_meta'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/chatter) by extensions ['ros']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/chatter) by extension 'ros'
+[0.504s] DEBUG:colcon.colcon_core.package_identification:Package 'src/chatter' with type 'ros.ament_python' and name 'chatter'
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_chatter_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_chatter_msgs) by extension 'ignore'
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_chatter_msgs) by extension 'ignore_ament_install'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_chatter_msgs) by extensions ['colcon_pkg']
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_chatter_msgs) by extension 'colcon_pkg'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_chatter_msgs) by extensions ['colcon_meta']
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_chatter_msgs) by extension 'colcon_meta'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_chatter_msgs) by extensions ['ros']
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_chatter_msgs) by extension 'ros'
+[0.533s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_chatter_msgs' with type 'ros.ament_cmake' and name 'my_chatter_msgs'
+[0.533s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.533s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.533s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.533s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.533s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'chatter' build argument 'cmake_args' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'chatter' build argument 'cmake_target' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'chatter' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'chatter' build argument 'cmake_clean_cache' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'chatter' build argument 'cmake_clean_first' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'chatter' build argument 'cmake_force_configure' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'chatter' build argument 'ament_cmake_args' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'chatter' build argument 'catkin_cmake_args' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'chatter' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.587s] DEBUG:colcon.colcon_core.verb:Building package 'chatter' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter', 'merge_install': False, 'path': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/chatter', 'symlink_install': False, 'test_result_base': None}
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'my_chatter_msgs' build argument 'cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'my_chatter_msgs' build argument 'cmake_target' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'my_chatter_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'my_chatter_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'my_chatter_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'my_chatter_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'my_chatter_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'my_chatter_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'my_chatter_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.588s] DEBUG:colcon.colcon_core.verb:Building package 'my_chatter_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs', 'merge_install': False, 'path': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/my_chatter_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'my_chatter' build argument 'cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'my_chatter' build argument 'cmake_target' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'my_chatter' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'my_chatter' build argument 'cmake_clean_cache' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'my_chatter' build argument 'cmake_clean_first' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'my_chatter' build argument 'cmake_force_configure' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'my_chatter' build argument 'ament_cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'my_chatter' build argument 'catkin_cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'my_chatter' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.589s] DEBUG:colcon.colcon_core.verb:Building package 'my_chatter' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter', 'merge_install': False, 'path': '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/my_chatter', 'symlink_install': False, 'test_result_base': None}
+[0.589s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.591s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.591s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/my_chatter_msgs' with build type 'ament_cmake'
+[0.592s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/my_chatter_msgs'
+[0.599s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.599s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.599s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.641s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/chatter' with build type 'ament_python'
+[0.641s] Level 1:colcon.colcon_core.shell:create_environment_hook('chatter', 'ament_prefix_path')
+[0.641s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter/hook/ament_prefix_path.ps1'
+[0.645s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter/hook/ament_prefix_path.dsv'
+[0.648s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter/hook/ament_prefix_path.sh'
+[0.652s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.652s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.705s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble /usr/bin/cmake --build /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs -- -j32 -l32
+[1.732s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/chatter'
+[1.733s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.733s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.399s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble /usr/bin/cmake --build /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs -- -j32 -l32
+[2.421s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble /usr/bin/cmake --install /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs
+[2.430s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/chatter': PYTHONPATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/chatter build --build-base /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build install --record /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/install.log --single-version-externally-managed install_data
+[2.725s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_chatter_msgs)
+[2.726s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble /usr/bin/cmake --install /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs
+[2.743s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs' for CMake module files
+[2.749s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs' for CMake config files
+[2.752s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_chatter_msgs', 'cmake_prefix_path')
+[2.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/hook/cmake_prefix_path.ps1'
+[2.755s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/hook/cmake_prefix_path.dsv'
+[2.757s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/hook/cmake_prefix_path.sh'
+[2.760s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib'
+[2.761s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_chatter_msgs', 'ld_library_path_lib')
+[2.761s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/hook/ld_library_path_lib.ps1'
+[2.763s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/hook/ld_library_path_lib.dsv'
+[2.766s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/hook/ld_library_path_lib.sh'
+[2.768s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/bin'
+[2.768s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/pkgconfig/my_chatter_msgs.pc'
+[2.768s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/python3.10/site-packages'
+[2.769s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/bin'
+[2.769s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.ps1'
+[2.772s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.dsv'
+[2.774s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.sh'
+[2.777s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.bash'
+[2.779s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.zsh'
+[2.781s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/colcon-core/packages/my_chatter_msgs)
+[2.785s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_chatter_msgs)
+[2.785s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs' for CMake module files
+[2.787s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs' for CMake config files
+[2.788s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_chatter_msgs', 'cmake_prefix_path')
+[2.789s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/hook/cmake_prefix_path.ps1'
+[2.790s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/hook/cmake_prefix_path.dsv'
+[2.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/hook/cmake_prefix_path.sh'
+[2.795s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib'
+[2.795s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_chatter_msgs', 'ld_library_path_lib')
+[2.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/hook/ld_library_path_lib.ps1'
+[2.797s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/hook/ld_library_path_lib.dsv'
+[2.799s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/hook/ld_library_path_lib.sh'
+[2.802s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/bin'
+[2.802s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/pkgconfig/my_chatter_msgs.pc'
+[2.802s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/python3.10/site-packages'
+[2.803s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/bin'
+[2.804s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.ps1'
+[2.807s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.dsv'
+[2.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.sh'
+[2.813s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.bash'
+[2.816s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.zsh'
+[2.818s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/colcon-core/packages/my_chatter_msgs)
+[2.821s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/my_chatter' with build type 'ament_python'
+[2.821s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_chatter', 'ament_prefix_path')
+[2.821s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/share/my_chatter/hook/ament_prefix_path.ps1'
+[2.827s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/share/my_chatter/hook/ament_prefix_path.dsv'
+[2.830s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/share/my_chatter/hook/ament_prefix_path.sh'
+[2.833s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.833s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.855s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter' for CMake module files
+[2.856s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/chatter' returned '0': PYTHONPATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/chatter build --build-base /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/build install --record /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/chatter/install.log --single-version-externally-managed install_data
+[2.861s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter' for CMake config files
+[2.871s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib'
+[2.872s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/bin'
+[2.872s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/pkgconfig/chatter.pc'
+[2.873s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/lib/python3.10/site-packages'
+[2.873s] Level 1:colcon.colcon_core.shell:create_environment_hook('chatter', 'pythonpath')
+[2.873s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter/hook/pythonpath.ps1'
+[2.876s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter/hook/pythonpath.dsv'
+[2.879s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter/hook/pythonpath.sh'
+[2.882s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/bin'
+[2.883s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(chatter)
+[2.883s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter/package.ps1'
+[2.886s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter/package.dsv'
+[2.889s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter/package.sh'
+[2.892s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter/package.bash'
+[2.895s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/chatter/package.zsh'
+[2.897s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter/share/colcon-core/packages/chatter)
+[3.144s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/my_chatter'
+[3.145s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.145s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.512s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/my_chatter': PYTHONPATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_chatter build --build-base /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/build install --record /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/install.log --single-version-externally-managed install_data
+[3.889s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter' for CMake module files
+[3.889s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/my_chatter' returned '0': PYTHONPATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_chatter build --build-base /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/build install --record /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/install.log --single-version-externally-managed install_data
+[3.892s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter' for CMake config files
+[3.900s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib'
+[3.900s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/bin'
+[3.900s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/pkgconfig/my_chatter.pc'
+[3.901s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/python3.10/site-packages'
+[3.901s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_chatter', 'pythonpath')
+[3.901s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/share/my_chatter/hook/pythonpath.ps1'
+[3.903s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/share/my_chatter/hook/pythonpath.dsv'
+[3.905s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/share/my_chatter/hook/pythonpath.sh'
+[3.908s] Level 1:colcon.colcon_core.environment:checking '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/bin'
+[3.908s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_chatter)
+[3.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/share/my_chatter/package.ps1'
+[3.912s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/share/my_chatter/package.dsv'
+[3.914s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/share/my_chatter/package.sh'
+[3.917s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/share/my_chatter/package.bash'
+[3.920s] INFO:colcon.colcon_core.shell:Creating package script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/share/my_chatter/package.zsh'
+[3.922s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/share/colcon-core/packages/my_chatter)
+[3.924s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.925s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.925s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.925s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.959s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[3.959s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.959s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.959s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.071s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.072s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/local_setup.ps1'
+[4.074s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/_local_setup_util_ps1.py'
+[4.077s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/setup.ps1'
+[4.082s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/local_setup.sh'
+[4.085s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/_local_setup_util_sh.py'
+[4.088s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/setup.sh'
+[4.094s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/local_setup.bash'
+[4.097s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/setup.bash'
+[4.103s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/local_setup.zsh'
+[4.106s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/setup.zsh'

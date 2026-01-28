@@ -25,7 +25,7 @@ extern "C"
 typedef struct my_chatter_msgs__msg__TimestampString
 {
   rosidl_runtime_c__String message;
-  float timestamp;
+  uint32_t timestamp;
 } my_chatter_msgs__msg__TimestampString;
 
 // Struct for a sequence of my_chatter_msgs__msg__TimestampString.

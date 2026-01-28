@@ -73,8 +73,8 @@ bool my_chatter_msgs__msg__timestamp_string__convert_from_py(PyObject * _pymsg, 
     if (!field) {
       return false;
     }
-    assert(PyFloat_Check(field));
-    ros_message->timestamp = (float)PyFloat_AS_DOUBLE(field);
+    assert(PyLong_Check(field));
+    ros_message->timestamp = PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
 
@@ -118,7 +118,7 @@ PyObject * my_chatter_msgs__msg__timestamp_string__convert_to_py(void * raw_ros_
   }
   {  // timestamp
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->timestamp);
+    field = PyLong_FromUnsignedLong(ros_message->timestamp);
     {
       int rc = PyObject_SetAttrString(_pymessage, "timestamp", field);
       Py_DECREF(field);

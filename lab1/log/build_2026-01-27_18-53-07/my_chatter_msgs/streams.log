@@ -1,0 +1,144 @@
+[0.113s] Invoking command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble /usr/bin/cmake --build /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs -- -j32 -l32
+[1.112s] [  3%] Built target my_chatter_msgs__cpp
+[1.191s] [ 12%] Built target my_chatter_msgs__rosidl_generator_c
+[1.241s] [ 12%] Built target ament_cmake_python_copy_my_chatter_msgs
+[1.387s] [ 25%] Built target my_chatter_msgs__rosidl_typesupport_introspection_c
+[1.398s] [ 61%] Built target my_chatter_msgs__rosidl_typesupport_cpp
+[1.400s] [ 67%] Built target my_chatter_msgs__rosidl_typesupport_fastrtps_cpp
+[1.402s] [ 70%] Built target my_chatter_msgs__rosidl_typesupport_introspection_cpp
+[1.402s] [ 70%] Built target my_chatter_msgs__rosidl_typesupport_fastrtps_c
+[1.402s] [ 70%] Built target my_chatter_msgs__rosidl_typesupport_c
+[1.442s] [ 70%] Built target my_chatter_msgs
+[1.483s] [ 74%] Built target my_chatter_msgs__py
+[1.574s] [ 80%] Built target my_chatter_msgs__rosidl_generator_py
+[1.667s] [ 87%] Built target my_chatter_msgs__rosidl_typesupport_c__pyext
+[1.686s] [ 93%] Built target my_chatter_msgs__rosidl_typesupport_fastrtps_c__pyext
+[1.687s] running egg_info
+[1.689s] writing my_chatter_msgs.egg-info/PKG-INFO
+[1.691s] writing dependency_links to my_chatter_msgs.egg-info/dependency_links.txt
+[1.694s] writing top-level names to my_chatter_msgs.egg-info/top_level.txt
+[1.699s] [100%] Built target my_chatter_msgs__rosidl_typesupport_introspection_c__pyext
+[1.702s] reading manifest file 'my_chatter_msgs.egg-info/SOURCES.txt'
+[1.705s] writing manifest file 'my_chatter_msgs.egg-info/SOURCES.txt'
+[1.738s] [100%] Built target ament_cmake_python_build_my_chatter_msgs_egg
+[1.806s] Invoked command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble /usr/bin/cmake --build /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs -- -j32 -l32
+[1.828s] Invoking command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble /usr/bin/cmake --install /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs
+[1.853s] -- Install configuration: ""
+[1.855s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/rosidl_interfaces/my_chatter_msgs
+[1.856s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs
+[1.858s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg
+[1.860s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/timestamp_string.h
+[1.861s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/rosidl_generator_c__visibility_control.h
+[1.862s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail
+[1.864s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__functions.c
+[1.864s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__functions.h
+[1.865s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__struct.h
+[1.866s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__type_support.h
+[1.867s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/library_path.sh
+[1.868s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/library_path.dsv
+[1.871s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_generator_c.so
+[1.874s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs
+[1.875s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg
+[1.876s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail
+[1.878s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__rosidl_typesupport_fastrtps_c.h
+[1.879s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.883s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_fastrtps_c.so
+[1.886s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs
+[1.887s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg
+[1.889s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail
+[1.890s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__rosidl_typesupport_introspection_c.h
+[1.890s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__type_support.c
+[1.891s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.894s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_introspection_c.so
+[1.899s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_c.so
+[1.901s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs
+[1.902s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg
+[1.903s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/timestamp_string.hpp
+[1.904s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.904s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail
+[1.906s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__builder.hpp
+[1.906s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__struct.hpp
+[1.907s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__traits.hpp
+[1.907s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__type_support.hpp
+[1.908s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs
+[1.909s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg
+[1.910s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail
+[1.912s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__rosidl_typesupport_fastrtps_cpp.hpp
+[1.912s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/dds_fastrtps
+[1.913s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.917s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_fastrtps_cpp.so
+[1.921s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs
+[1.922s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg
+[1.923s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail
+[1.925s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__rosidl_typesupport_introspection_cpp.hpp
+[1.925s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/include/my_chatter_msgs/my_chatter_msgs/msg/detail/timestamp_string__type_support.cpp
+[1.928s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_introspection_cpp.so
+[1.933s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_typesupport_cpp.so
+[1.935s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/pythonpath.sh
+[1.936s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/pythonpath.dsv
+[1.937s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs-0.0.0-py3.10.egg-info
+[1.938s] -- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[1.944s] -- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.949s] -- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[1.954s] -- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.959s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs
+[1.960s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/__init__.py
+[1.961s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/msg
+[1.962s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/msg/_timestamp_string.py
+[1.962s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/msg/_timestamp_string_s.c
+[1.963s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/msg/__init__.py
+[1.963s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/_my_chatter_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.964s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/_my_chatter_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[1.964s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/_my_chatter_msgs_s.ep.rosidl_typesupport_c.c
+[1.965s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/libmy_chatter_msgs__rosidl_generator_py.so
+[1.966s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.966s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.967s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.007s] Listing '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs'...
+[2.007s] Listing '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/msg'...
+[2.013s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.017s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.021s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages/my_chatter_msgs/my_chatter_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.026s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib/libmy_chatter_msgs__rosidl_generator_py.so
+[2.029s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/msg/TimestampString.idl
+[2.030s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/msg/TimestampString.msg
+[2.031s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/package_run_dependencies/my_chatter_msgs
+[2.033s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/parent_prefix_path/my_chatter_msgs
+[2.033s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/ament_prefix_path.sh
+[2.034s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/ament_prefix_path.dsv
+[2.035s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/path.sh
+[2.036s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/environment/path.dsv
+[2.036s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.bash
+[2.037s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.sh
+[2.038s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.zsh
+[2.039s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/local_setup.dsv
+[2.040s] -- Installing: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.dsv
+[2.048s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/ament_index/resource_index/packages/my_chatter_msgs
+[2.060s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_generator_cExport.cmake
+[2.061s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_generator_cExport-noconfig.cmake
+[2.066s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[2.068s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.080s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_introspection_cExport.cmake
+[2.081s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.086s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_cExport.cmake
+[2.087s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[2.091s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_generator_cppExport.cmake
+[2.096s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.098s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.102s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[2.104s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.109s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_cppExport.cmake
+[2.110s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[2.115s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_generator_pyExport.cmake
+[2.117s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/export_my_chatter_msgs__rosidl_generator_pyExport-noconfig.cmake
+[2.117s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/rosidl_cmake-extras.cmake
+[2.118s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.119s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[2.119s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[2.120s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.121s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.122s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.122s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgsConfig.cmake
+[2.123s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/cmake/my_chatter_msgsConfig-version.cmake
+[2.124s] -- Up-to-date: /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/share/my_chatter_msgs/package.xml
+[2.134s] Invoked command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/chatter:/home/ff/ee106a/robot_workspaces/ur/install/ur7e_utils:/opt/ros/humble /usr/bin/cmake --install /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter_msgs
