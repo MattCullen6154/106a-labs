@@ -1,0 +1,5 @@
+  File "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/python3.10/site-packages/my_chatter/my_talker.py", line 41
+    rclpy.spin_once(self, timeout_sec=0.0
+                   ^
+SyntaxError: '(' was never closed
+

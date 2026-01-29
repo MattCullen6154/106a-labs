@@ -1,0 +1,30 @@
+[0.916s] Invoking command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/my_chatter': AMENT_PREFIX_PATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs LD_LIBRARY_PATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/python3.10/site-packages:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_chatter build --build-base /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/build install --record /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/install.log --single-version-externally-managed install_data
+[1.135s] running egg_info
+[1.136s] writing ../../build/my_chatter/my_chatter.egg-info/PKG-INFO
+[1.138s] writing dependency_links to ../../build/my_chatter/my_chatter.egg-info/dependency_links.txt
+[1.140s] writing entry points to ../../build/my_chatter/my_chatter.egg-info/entry_points.txt
+[1.141s] writing requirements to ../../build/my_chatter/my_chatter.egg-info/requires.txt
+[1.143s] writing top-level names to ../../build/my_chatter/my_chatter.egg-info/top_level.txt
+[1.149s] reading manifest file '../../build/my_chatter/my_chatter.egg-info/SOURCES.txt'
+[1.160s] writing manifest file '../../build/my_chatter/my_chatter.egg-info/SOURCES.txt'
+[1.161s] running build
+[1.161s] running build_py
+[1.164s] copying my_chatter/my_talker.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/build/lib/my_chatter
+[1.184s] running install
+[1.184s] running install_lib
+[1.203s] copying /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/build/lib/my_chatter/my_talker.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/python3.10/site-packages/my_chatter
+[1.212s] byte-compiling /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/python3.10/site-packages/my_chatter/my_talker.py to my_talker.cpython-310.pyc
+[1.215s]   File "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/python3.10/site-packages/my_chatter/my_talker.py", line 41
+[1.216s]     rclpy.spin_once(self, timeout_sec=0.0
+[1.216s]                    ^
+[1.216s] SyntaxError: '(' was never closed
+[1.216s] 
+[1.216s] running install_data
+[1.218s] running install_egg_info
+[1.223s] removing '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/python3.10/site-packages/my_chatter-0.0.0-py3.10.egg-info' (and everything under it)
+[1.228s] Copying ../../build/my_chatter/my_chatter.egg-info to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/python3.10/site-packages/my_chatter-0.0.0-py3.10.egg-info
+[1.257s] running install_scripts
+[1.288s] Installing my_listener script to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/my_chatter
+[1.290s] Installing my_talker script to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/my_chatter
+[1.292s] writing list of installed files to '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/install.log'
+[1.308s] Invoked command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/src/my_chatter' returned '0': AMENT_PREFIX_PATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs LD_LIBRARY_PATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter/lib/python3.10/site-packages:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/install/my_chatter_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_chatter build --build-base /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/build install --record /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab1/build/my_chatter/install.log --single-version-externally-managed install_data

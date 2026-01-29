@@ -28,15 +28,17 @@ class MinimalPublisher(Node):
         super().__init__('minimal_publisher')
         
          # Here, we set that the node publishes message of type String (where did this type come from?), over a topic called "chatter_talk", and with queue size 10. The queue size limits the amount of queued messages if a subscriber doesn't receive them quickly enough.
-        
+        self.publisher_ = self.create_publisher(String, '/user_messages', 10)
 
-        self.publisher_ = self.create_publisher(String, 'chatter_talk', 10)
-        msg = String()
-        message = input("Please enter a line of text and press <Enter>:\n")
-        #print(message)
-        clock = self.get_clock().now()
-        msg.data = f"Message: {message}, Sent at: {clock}, Received at: {clock}"
-        self.publisher_.publish(msg)
+    def run(self):
+        while rclpy.ok():
+            text = input("Please enter a line of text and press <Enter>:\n")
+            sent_ns = self.get_clock().now().nanoseconds
+            message = String()
+            message.data = f"Message: {text}, Sent at: {sent_ns}"
+            self.publisher_.publish(message)
+
+            rclpy.spin_once(self, timeout_sec=0.0)
 
 
 
@@ -45,15 +47,15 @@ def main(args=None):
     # Initialize the rclpy library
     rclpy.init(args=args)
     # Create the node
-    minimal_publisher = MinimalPublisher()
-    # Spin the node so its callbacks are called
-    rclpy.spin(minimal_publisher)
-
-    # Destroy the node explicitly
-    # (optional - otherwise it will be done automatically
-    # when the garbage collector destroys the node object)
-    minimal_publisher.destroy_node()
-    rclpy.shutdown()
+    node = MinimalPublisher()
+    
+    try:
+        node.run()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':

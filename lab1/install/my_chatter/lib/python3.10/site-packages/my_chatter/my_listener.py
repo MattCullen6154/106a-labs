@@ -24,13 +24,14 @@ class MinimalSubscriber(Node):
         super().__init__('minimal_subscriber')
         self.subscription = self.create_subscription(
             String,
-            'chatter_talk',
+            '/user_messages',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
 
-    def listener_callback(self, msg):
-        self.get_logger().info('I heard: "%s"' % msg.data)
+    def listener_callback(self, msg:String):
+        received_ns = self.get_clock().now().nanoseconds
+        self.get_logger().info(f"{msg.data}, Received at: {received_ns}")
 
 
 def main(args=None):
