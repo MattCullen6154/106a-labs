@@ -1,6 +1,6 @@
 import rclpy
 import sys
-from rclpy import Node
+from rclpy.node import Node
 from geometry_msgs.msg import Twist
 import turtlesim
 
@@ -8,16 +8,32 @@ class Turtle_Controller(Node):
     def __init__(self, turtle_name):
         super().__init__('turtle_controller')
         #see if this works
-        if len(sys.argv[1] > 1):
-            turtle_name = sys.argv[1]
+        #turtle_name = sys.argv[1]
+        #print(turtle_name) # this works
+        self.publisher_ = self.create_publisher(Twist, f'{turtle_name}/cmd_vel', 10)
 
 # Publisher
 # publish twist control msgs whern user presses keys
 
-    def run(self):
+    def publish_command(self, key):
+        #left = 
         while rclpy.ok():
-            user_in = input() #get input from user keystroke
-            print(user_in) # see what this does
+            #user_in = input("tell the turtle where to go; wasd = ^<v>. \n") #get input from user keystroke
+            msg = Twist()
+            if key == 'w':
+                msg.linear.y = 1.0 
+            elif key == 'a':
+                msg.linear.x = -1.0
+            elif key == 's':
+                msg.linear.y = -1.0
+            elif key == 'd':
+                msg.linear.x = 1.0
+            
+            self.publisher_.publish(msg)
+
+            #rclpy.spin_once(self)
+
+
 
 
 
@@ -28,10 +44,16 @@ def main(args=None):
     # Initialize the rclpy library
     rclpy.init(args=args)
     # Create the node
-    node = Turtle_Controller()
+    turtle_name = sys.argv[1]
+    node = Turtle_Controller(turtle_name)
     
     try:
-        node.run()
+        key_in = input("tell the turtle where to go; wasd = ^<v>. q to quit \n")
+        if key_in == 'q':
+            node.destroy_node()
+            rclpy.shutdown()
+        node.publish_command(key_in)
+
     except KeyboardInterrupt:
         pass
     finally:

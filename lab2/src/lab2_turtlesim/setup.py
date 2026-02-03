@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-        'turtle_controller = py_pubsub.turtle_controller:main',
+        'turtle_controller = lab2_turtlesim.turtle_controller:main',
         ],
     },
 )
