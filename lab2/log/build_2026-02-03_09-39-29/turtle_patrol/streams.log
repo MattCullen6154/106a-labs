@@ -1,0 +1,43 @@
+[1.926s] Invoking command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/src/turtle_patrol': PYTHONPATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_patrol build --build-base /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/build install --record /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/install.log --single-version-externally-managed install_data
+[2.147s] running egg_info
+[2.147s] creating ../../build/turtle_patrol/turtle_patrol.egg-info
+[2.148s] writing ../../build/turtle_patrol/turtle_patrol.egg-info/PKG-INFO
+[2.153s] writing dependency_links to ../../build/turtle_patrol/turtle_patrol.egg-info/dependency_links.txt
+[2.156s] writing entry points to ../../build/turtle_patrol/turtle_patrol.egg-info/entry_points.txt
+[2.158s] writing requirements to ../../build/turtle_patrol/turtle_patrol.egg-info/requires.txt
+[2.159s] writing top-level names to ../../build/turtle_patrol/turtle_patrol.egg-info/top_level.txt
+[2.161s] writing manifest file '../../build/turtle_patrol/turtle_patrol.egg-info/SOURCES.txt'
+[2.179s] reading manifest file '../../build/turtle_patrol/turtle_patrol.egg-info/SOURCES.txt'
+[2.183s] writing manifest file '../../build/turtle_patrol/turtle_patrol.egg-info/SOURCES.txt'
+[2.184s] running build
+[2.185s] running build_py
+[2.186s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/build
+[2.186s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/build/lib
+[2.187s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/build/lib/turtle_patrol
+[2.189s] copying turtle_patrol/__init__.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/build/lib/turtle_patrol
+[2.194s] copying turtle_patrol/patrol_client.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/build/lib/turtle_patrol
+[2.200s] copying turtle_patrol/patrol_server.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/build/lib/turtle_patrol
+[2.206s] running install
+[2.206s] running install_lib
+[2.211s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/python3.10/site-packages/turtle_patrol
+[2.212s] copying /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/build/lib/turtle_patrol/__init__.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/python3.10/site-packages/turtle_patrol
+[2.222s] copying /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/build/lib/turtle_patrol/patrol_client.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/python3.10/site-packages/turtle_patrol
+[2.228s] copying /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/build/lib/turtle_patrol/patrol_server.py -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/python3.10/site-packages/turtle_patrol
+[2.234s] byte-compiling /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/python3.10/site-packages/turtle_patrol/__init__.py to __init__.cpython-310.pyc
+[2.238s] byte-compiling /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/python3.10/site-packages/turtle_patrol/patrol_client.py to patrol_client.cpython-310.pyc
+[2.244s] byte-compiling /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/python3.10/site-packages/turtle_patrol/patrol_server.py to patrol_server.cpython-310.pyc
+[2.249s] running install_data
+[2.250s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/share/ament_index
+[2.251s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/share/ament_index/resource_index
+[2.252s] creating /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/share/ament_index/resource_index/packages
+[2.253s] copying resource/turtle_patrol -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/share/ament_index/resource_index/packages
+[2.256s] copying package.xml -> /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/share/turtle_patrol
+[2.258s] running install_egg_info
+[2.261s] Copying ../../build/turtle_patrol/turtle_patrol.egg-info to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/python3.10/site-packages/turtle_patrol-0.0.0-py3.10.egg-info
+[2.291s] running install_scripts
+[2.318s] Installing patrol_client script to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/turtle_patrol
+[2.321s] Installing patrol_client_sol script to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/turtle_patrol
+[2.322s] Installing patrol_server script to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/turtle_patrol
+[2.325s] Installing patrol_server_sol script to /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/turtle_patrol
+[2.327s] writing list of installed files to '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/install.log'
+[2.348s] Invoked command in '/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/src/turtle_patrol' returned '0': PYTHONPATH=/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/turtle_patrol/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_patrol build --build-base /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/build install --record /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol/install.log --single-version-externally-managed install_data
