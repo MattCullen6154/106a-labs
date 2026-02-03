@@ -10,7 +10,7 @@ class Turtle_Controller(Node):
         #see if this works
         #turtle_name = sys.argv[1]
         #print(turtle_name) # this works
-        self.publisher_ = self.create_publisher(Twist, f'{turtle_name}/cmd_vel', 10)
+        self.publisher_ = self.create_publisher(Twist, f'/{turtle_name}/cmd_vel', 10)
 
 # Publisher
 # publish twist control msgs whern user presses keys
@@ -30,12 +30,8 @@ class Turtle_Controller(Node):
                 msg.linear.x = 1.0
             
             self.publisher_.publish(msg)
-
+            return
             #rclpy.spin_once(self)
-
-
-
-
 
 
 # Main stuff copied from chatter.my_talker
@@ -43,22 +39,41 @@ class Turtle_Controller(Node):
 def main(args=None):
     # Initialize the rclpy library
     rclpy.init(args=args)
-    # Create the node
+
+
+    if len(sys.argv) < 2:
+        print("Usage: ros2 run <package> <node> <turtle_name>")
+        return
+
     turtle_name = sys.argv[1]
     node = Turtle_Controller(turtle_name)
     
     try:
-        key_in = input("tell the turtle where to go; wasd = ^<v>. q to quit \n")
-        if key_in == 'q':
-            node.destroy_node()
-            rclpy.shutdown()
-        node.publish_command(key_in)
+        while True:
+            #rclpy.spin_once(node, timeout_sec=0.1)
+            key_in = input("tell the turtle where to go; wasd = ^<v>. q to quit \n")
+            
+            if key_in == 'q':
+                break
 
+            elif key_in in ['w', 'a', 's', 'd']:
+                node.publish_command(key_in)
+                #key_in = input()
+        
     except KeyboardInterrupt:
         pass
+
     finally:
         node.destroy_node()
         rclpy.shutdown()
+
+        
+
+    #except KeyboardInterrupt:
+    #    pass
+    #finally:
+    node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':
