@@ -12,6 +12,7 @@ class Turtle1PatrolServer(Node):
         super().__init__('turtle1_patrol_server')
 
         # Create dict keyed on turtle_name
+        # Nest dicts ie turtles = {"turtle_name" : {state dict}}
         self.turtles = {}
 
         # Publisher: actually drives turtle1
