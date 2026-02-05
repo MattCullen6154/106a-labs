@@ -11,6 +11,9 @@ class Turtle1PatrolServer(Node):
     def __init__(self):
         super().__init__('turtle1_patrol_server')
 
+        # Create dict keyed on turtle_name
+        self.turtles = {}
+
         # Publisher: actually drives turtle1
         self._cmd_pub = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
         self._srv = self.create_service(Patrol, '/turtle1/patrol', self.patrol_callback)
