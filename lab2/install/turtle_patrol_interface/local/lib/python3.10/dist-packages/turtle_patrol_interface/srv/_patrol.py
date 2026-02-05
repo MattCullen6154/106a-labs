@@ -59,14 +59,23 @@ class Patrol_Request(metaclass=Metaclass_Patrol_Request):
     __slots__ = [
         '_vel',
         '_omega',
+        '_x',
+        '_y',
+        '_theta',
     ]
 
     _fields_and_field_types = {
         'vel': 'float',
         'omega': 'float',
+        'x': 'float',
+        'y': 'float',
+        'theta': 'float',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
     )
@@ -77,6 +86,9 @@ class Patrol_Request(metaclass=Metaclass_Patrol_Request):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.vel = kwargs.get('vel', float())
         self.omega = kwargs.get('omega', float())
+        self.x = kwargs.get('x', float())
+        self.y = kwargs.get('y', float())
+        self.theta = kwargs.get('theta', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -110,6 +122,12 @@ class Patrol_Request(metaclass=Metaclass_Patrol_Request):
         if self.vel != other.vel:
             return False
         if self.omega != other.omega:
+            return False
+        if self.x != other.x:
+            return False
+        if self.y != other.y:
+            return False
+        if self.theta != other.theta:
             return False
         return True
 
@@ -147,6 +165,51 @@ class Patrol_Request(metaclass=Metaclass_Patrol_Request):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'omega' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._omega = value
+
+    @builtins.property
+    def x(self):
+        """Message field 'x'."""
+        return self._x
+
+    @x.setter
+    def x(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'x' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'x' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._x = value
+
+    @builtins.property
+    def y(self):
+        """Message field 'y'."""
+        return self._y
+
+    @y.setter
+    def y(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'y' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'y' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._y = value
+
+    @builtins.property
+    def theta(self):
+        """Message field 'theta'."""
+        return self._theta
+
+    @theta.setter
+    def theta(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'theta' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'theta' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._theta = value
 
 
 # Import statements for member types
@@ -207,14 +270,20 @@ class Patrol_Response(metaclass=Metaclass_Patrol_Response):
     """Message class 'Patrol_Response'."""
 
     __slots__ = [
+        '_success',
+        '_message',
         '_cmd',
     ]
 
     _fields_and_field_types = {
+        'success': 'boolean',
+        'message': 'string',
         'cmd': 'geometry_msgs/Twist',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Twist'),  # noqa: E501
     )
 
@@ -222,6 +291,8 @@ class Patrol_Response(metaclass=Metaclass_Patrol_Response):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.success = kwargs.get('success', bool())
+        self.message = kwargs.get('message', str())
         from geometry_msgs.msg import Twist
         self.cmd = kwargs.get('cmd', Twist())
 
@@ -254,6 +325,10 @@ class Patrol_Response(metaclass=Metaclass_Patrol_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.success != other.success:
+            return False
+        if self.message != other.message:
+            return False
         if self.cmd != other.cmd:
             return False
         return True
@@ -262,6 +337,32 @@ class Patrol_Response(metaclass=Metaclass_Patrol_Response):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def success(self):
+        """Message field 'success'."""
+        return self._success
+
+    @success.setter
+    def success(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'success' field must be of type 'bool'"
+        self._success = value
+
+    @builtins.property
+    def message(self):
+        """Message field 'message'."""
+        return self._message
+
+    @message.setter
+    def message(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'message' field must be of type 'str'"
+        self._message = value
 
     @builtins.property
     def cmd(self):

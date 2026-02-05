@@ -58,8 +58,11 @@ CMakeFiles/turtle_patrol_interface__rosidl_typesupport_introspection_c.dir/rosid
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol_interface/rosidl_generator_c/turtle_patrol_interface/msg/rosidl_generator_c__visibility_control.h \
  /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol_interface/rosidl_generator_c/turtle_patrol_interface/srv/detail/patrol__struct.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__functions.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_c__visibility_control.h \

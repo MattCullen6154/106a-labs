@@ -41,6 +41,9 @@ struct Patrol_Request_
     {
       this->vel = 0.0f;
       this->omega = 0.0f;
+      this->x = 0.0f;
+      this->y = 0.0f;
+      this->theta = 0.0f;
     }
   }
 
@@ -52,6 +55,9 @@ struct Patrol_Request_
     {
       this->vel = 0.0f;
       this->omega = 0.0f;
+      this->x = 0.0f;
+      this->y = 0.0f;
+      this->theta = 0.0f;
     }
   }
 
@@ -62,6 +68,15 @@ struct Patrol_Request_
   using _omega_type =
     float;
   _omega_type omega;
+  using _x_type =
+    float;
+  _x_type x;
+  using _y_type =
+    float;
+  _y_type y;
+  using _theta_type =
+    float;
+  _theta_type theta;
 
   // setters for named parameter idiom
   Type & set__vel(
@@ -74,6 +89,24 @@ struct Patrol_Request_
     const float & _arg)
   {
     this->omega = _arg;
+    return *this;
+  }
+  Type & set__x(
+    const float & _arg)
+  {
+    this->x = _arg;
+    return *this;
+  }
+  Type & set__y(
+    const float & _arg)
+  {
+    this->y = _arg;
+    return *this;
+  }
+  Type & set__theta(
+    const float & _arg)
+  {
+    this->theta = _arg;
     return *this;
   }
 
@@ -125,6 +158,15 @@ struct Patrol_Request_
     if (this->omega != other.omega) {
       return false;
     }
+    if (this->x != other.x) {
+      return false;
+    }
+    if (this->y != other.y) {
+      return false;
+    }
+    if (this->theta != other.theta) {
+      return false;
+    }
     return true;
   }
   bool operator!=(const Patrol_Request_ & other) const
@@ -169,21 +211,50 @@ struct Patrol_Response_
   explicit Patrol_Response_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : cmd(_init)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->success = false;
+      this->message = "";
+    }
   }
 
   explicit Patrol_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : cmd(_alloc, _init)
+  : message(_alloc),
+    cmd(_alloc, _init)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->success = false;
+      this->message = "";
+    }
   }
 
   // field types and members
+  using _success_type =
+    bool;
+  _success_type success;
+  using _message_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _message_type message;
   using _cmd_type =
     geometry_msgs::msg::Twist_<ContainerAllocator>;
   _cmd_type cmd;
 
   // setters for named parameter idiom
+  Type & set__success(
+    const bool & _arg)
+  {
+    this->success = _arg;
+    return *this;
+  }
+  Type & set__message(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->message = _arg;
+    return *this;
+  }
   Type & set__cmd(
     const geometry_msgs::msg::Twist_<ContainerAllocator> & _arg)
   {
@@ -233,6 +304,12 @@ struct Patrol_Response_
   // comparison operators
   bool operator==(const Patrol_Response_ & other) const
   {
+    if (this->success != other.success) {
+      return false;
+    }
+    if (this->message != other.message) {
+      return false;
+    }
     if (this->cmd != other.cmd) {
       return false;
     }

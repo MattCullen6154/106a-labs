@@ -25,6 +25,8 @@ CMakeFiles/turtle_patrol_interface__rosidl_typesupport_c.dir/rosidl_typesupport_
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h \
  /home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/build/turtle_patrol_interface/rosidl_generator_c/turtle_patrol_interface/srv/detail/patrol__type_support.h \

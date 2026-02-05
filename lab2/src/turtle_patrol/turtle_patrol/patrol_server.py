@@ -15,8 +15,11 @@ class Turtle1PatrolServer(Node):
         self.turtles = {}
 
         # Publisher: actually drives turtle1
-        self._cmd_pub = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
-        self._srv = self.create_service(Patrol, '/turtle1/patrol', self.patrol_callback)
+
+        # Changed '/turtle1/cmd_vel' to f'/{turtle_name}/cmd_vel'
+        # and '/turtle1/patrol' to f'/{turtle_name}/patrol'
+        self._cmd_pub = self.create_publisher(Twist, f'/{turtle_name}/cmd_vel', 10)
+        self._srv = self.create_service(Patrol, f'/{turtle_name}/patrol', self.patrol_callback)
 
         # Current commanded speeds (what timer publishes)
         self._lin = 0.0
