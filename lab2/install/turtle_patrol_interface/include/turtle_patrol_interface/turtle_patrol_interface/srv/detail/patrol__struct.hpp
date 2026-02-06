@@ -225,21 +225,50 @@ struct Patrol_Response_
   explicit Patrol_Response_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : cmd(_init)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->success = false;
+      this->message = "";
+    }
   }
 
   explicit Patrol_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : cmd(_alloc, _init)
+  : message(_alloc),
+    cmd(_alloc, _init)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->success = false;
+      this->message = "";
+    }
   }
 
   // field types and members
+  using _success_type =
+    bool;
+  _success_type success;
+  using _message_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _message_type message;
   using _cmd_type =
     geometry_msgs::msg::Twist_<ContainerAllocator>;
   _cmd_type cmd;
 
   // setters for named parameter idiom
+  Type & set__success(
+    const bool & _arg)
+  {
+    this->success = _arg;
+    return *this;
+  }
+  Type & set__message(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->message = _arg;
+    return *this;
+  }
   Type & set__cmd(
     const geometry_msgs::msg::Twist_<ContainerAllocator> & _arg)
   {
@@ -289,6 +318,12 @@ struct Patrol_Response_
   // comparison operators
   bool operator==(const Patrol_Response_ & other) const
   {
+    if (this->success != other.success) {
+      return false;
+    }
+    if (this->message != other.message) {
+      return false;
+    }
     if (this->cmd != other.cmd) {
       return false;
     }

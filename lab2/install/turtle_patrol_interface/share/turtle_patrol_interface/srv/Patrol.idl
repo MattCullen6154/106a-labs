@@ -20,6 +20,10 @@ module turtle_patrol_interface {
       float theta;
     };
     struct Patrol_Response {
+      boolean success;
+
+      string message;
+
       geometry_msgs::msg::Twist cmd;
     };
   };

@@ -1,4 +1,5 @@
 import rclpy
+import sys
 from rclpy.node import Node
 
 # Import our custom service
@@ -11,7 +12,7 @@ class TurtlePatrolClient(Node):
         super().__init__('turtle1_patrol_client')
 
 
-        self._service_name = '/turtle1/patrol'
+        self._service_name = '/turtle_patrol'
 
         # Create a client for our Patrol service type
         self._client = self.create_client(Patrol, self._service_name)
@@ -21,18 +22,23 @@ class TurtlePatrolClient(Node):
         while not self._client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info(f"Service {self._service_name} not available, waiting...")
 
-        def send_request(self, args):
-            req = Patrol.Request()
-            req.turtle_name = args[1]
-            req.x = float(args[2])
-            req.y = float(args[3])
-            req.theta = float(args[4])
-            req.vel = float(args[5])
-            req.omega = float(args[6])
+    def send_request(self, args):
+        req = Patrol.Request()
+        req.turtle_name = args[1]
+        req.x = float(args[2])
+        req.y = float(args[3])
+        req.theta = float(args[4])
 
-            future = self.cli.call_async(req)
-            #rclpy.spin_until_future_complete(self, future)
-            return future.result()
+        print("argv: ", args)
+        print("raw vel token: ", args[5])
+        print("raw omega token: ", args[6])
+
+        req.vel = float(args[5])
+        req.omega = float(args[6])
+
+        _future = self._client.call_async(req)
+        rclpy.spin_until_future_complete(self, _future)
+        return _future
 
         """
         # Hard-coded request values 
@@ -52,14 +58,14 @@ class TurtlePatrolClient(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = TurtlePatrolClient()
-
+    future = node.send_request(sys.argv)
     response = node.send_request(sys.argv)
 
     # Block here until the service responds (simple for teaching)
-    rclpy.spin_until_future_complete(node, node._future)
+    #rclpy.spin_until_future_complete(node, node.future)
 
-    if node._future.done():
-        result = node._future.result()
+    if future.done():
+        result = future.result()
         if result is not None:
             # Print the Twist returned by the server
             cmd = result.cmd

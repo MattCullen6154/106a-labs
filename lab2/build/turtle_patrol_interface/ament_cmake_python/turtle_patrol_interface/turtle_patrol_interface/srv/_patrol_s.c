@@ -226,6 +226,11 @@ PyObject * turtle_patrol_interface__srv__patrol__request__convert_to_py(void * r
 // already included above
 // #include "turtle_patrol_interface/srv/detail/patrol__functions.h"
 
+// already included above
+// #include "rosidl_runtime_c/string.h"
+// already included above
+// #include "rosidl_runtime_c/string_functions.h"
+
 ROSIDL_GENERATOR_C_IMPORT
 bool geometry_msgs__msg__twist__convert_from_py(PyObject * _pymsg, void * _ros_message);
 ROSIDL_GENERATOR_C_IMPORT
@@ -264,6 +269,30 @@ bool turtle_patrol_interface__srv__patrol__response__convert_from_py(PyObject * 
     assert(strncmp("turtle_patrol_interface.srv._patrol.Patrol_Response", full_classname_dest, 51) == 0);
   }
   turtle_patrol_interface__srv__Patrol_Response * ros_message = _ros_message;
+  {  // success
+    PyObject * field = PyObject_GetAttrString(_pymsg, "success");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->success = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // message
+    PyObject * field = PyObject_GetAttrString(_pymsg, "message");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->message, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
   {  // cmd
     PyObject * field = PyObject_GetAttrString(_pymsg, "cmd");
     if (!field) {
@@ -297,6 +326,34 @@ PyObject * turtle_patrol_interface__srv__patrol__response__convert_to_py(void * 
     }
   }
   turtle_patrol_interface__srv__Patrol_Response * ros_message = (turtle_patrol_interface__srv__Patrol_Response *)raw_ros_message;
+  {  // success
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->success ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "success", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // message
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->message.data,
+      strlen(ros_message->message.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "message", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // cmd
     PyObject * field = NULL;
     field = geometry_msgs__msg__twist__convert_to_py(&ros_message->cmd);

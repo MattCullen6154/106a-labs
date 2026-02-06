@@ -289,14 +289,20 @@ class Patrol_Response(metaclass=Metaclass_Patrol_Response):
     """Message class 'Patrol_Response'."""
 
     __slots__ = [
+        '_success',
+        '_message',
         '_cmd',
     ]
 
     _fields_and_field_types = {
+        'success': 'boolean',
+        'message': 'string',
         'cmd': 'geometry_msgs/Twist',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Twist'),  # noqa: E501
     )
 
@@ -304,6 +310,8 @@ class Patrol_Response(metaclass=Metaclass_Patrol_Response):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.success = kwargs.get('success', bool())
+        self.message = kwargs.get('message', str())
         from geometry_msgs.msg import Twist
         self.cmd = kwargs.get('cmd', Twist())
 
@@ -336,6 +344,10 @@ class Patrol_Response(metaclass=Metaclass_Patrol_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.success != other.success:
+            return False
+        if self.message != other.message:
+            return False
         if self.cmd != other.cmd:
             return False
         return True
@@ -344,6 +356,32 @@ class Patrol_Response(metaclass=Metaclass_Patrol_Response):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def success(self):
+        """Message field 'success'."""
+        return self._success
+
+    @success.setter
+    def success(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'success' field must be of type 'bool'"
+        self._success = value
+
+    @builtins.property
+    def message(self):
+        """Message field 'message'."""
+        return self._message
+
+    @message.setter
+    def message(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'message' field must be of type 'str'"
+        self._message = value
 
     @builtins.property
     def cmd(self):

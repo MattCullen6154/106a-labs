@@ -46,12 +46,17 @@ typedef struct turtle_patrol_interface__srv__Patrol_Request__Sequence
 // Constants defined in the message
 
 // Include directives for member types
+// Member 'message'
+// already included above
+// #include "rosidl_runtime_c/string.h"
 // Member 'cmd'
 #include "geometry_msgs/msg/detail/twist__struct.h"
 
 /// Struct defined in srv/Patrol in the package turtle_patrol_interface.
 typedef struct turtle_patrol_interface__srv__Patrol_Response
 {
+  bool success;
+  rosidl_runtime_c__String message;
   geometry_msgs__msg__Twist cmd;
 } turtle_patrol_interface__srv__Patrol_Response;
 

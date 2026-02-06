@@ -5,4 +5,6 @@ float32 x
 float32 y
 float32 theta
 ---
+bool success
+string message
 geometry_msgs/Twist cmd
