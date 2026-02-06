@@ -224,11 +224,13 @@ CMakeFiles/turtle_patrol_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typ
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/malloc.h \
   rosidl_generator_c/turtle_patrol_interface/srv/detail/patrol__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h \
   rosidl_generator_c/turtle_patrol_interface/srv/detail/patrol__functions.h \
   /usr/include/c++/11/stdlib.h \
   rosidl_generator_c/turtle_patrol_interface/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__functions.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp/service_type_support.h \
@@ -294,6 +296,8 @@ rosidl_generator_c/turtle_patrol_interface/srv/patrol.h:
 /opt/ros/humble/include/rmw/rmw/init.h:
 
 /opt/ros/humble/include/rmw/rmw/events_statuses/requested_deadline_missed.h:
+
+/opt/ros/humble/include/rmw/rmw/events_statuses/offered_deadline_missed.h:
 
 /usr/include/stdlib.h:
 
@@ -397,6 +401,10 @@ rosidl_generator_c/turtle_patrol_interface/srv/patrol.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
+/opt/ros/humble/include/rmw/rmw/events_statuses/message_lost.h:
+
+/opt/ros/humble/include/rmw/rmw/qos_policy_kind.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/c++/11/limits:
@@ -452,8 +460,6 @@ rosidl_generator_c/turtle_patrol_interface/srv/patrol.h:
 /usr/include/c++/11/bits/memoryfwd.h:
 
 /usr/include/c++/11/bits/stl_function.h:
-
-/opt/ros/humble/include/rmw/rmw/events_statuses/offered_deadline_missed.h:
 
 /usr/include/c++/11/backward/binders.h:
 
@@ -785,7 +791,11 @@ rosidl_generator_c/turtle_patrol_interface/srv/detail/patrol__struct.h:
 
 /usr/include/c++/11/bits/istream.tcc:
 
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+
 /usr/include/c++/11/stdlib.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h:
 
 /opt/ros/humble/include/rmw/rmw/types.h:
 
@@ -812,7 +822,3 @@ rosidl_generator_c/turtle_patrol_interface/srv/detail/patrol__struct.h:
 rosidl_typesupport_fastrtps_c/turtle_patrol_interface/srv/detail/patrol__type_support_c.cpp:
 
 /opt/ros/humble/include/rmw/rmw/events_statuses/liveliness_changed.h:
-
-/opt/ros/humble/include/rmw/rmw/qos_policy_kind.h:
-
-/opt/ros/humble/include/rmw/rmw/events_statuses/message_lost.h:

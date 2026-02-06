@@ -25,6 +25,13 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
+  // member: turtle_name
+  {
+    out << "turtle_name: ";
+    rosidl_generator_traits::value_to_yaml(msg.turtle_name, out);
+    out << ", ";
+  }
+
   // member: vel
   {
     out << "vel: ";
@@ -65,6 +72,16 @@ inline void to_block_style_yaml(
   const Patrol_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
+  // member: turtle_name
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "turtle_name: ";
+    rosidl_generator_traits::value_to_yaml(msg.turtle_name, out);
+    out << "\n";
+  }
+
   // member: vel
   {
     if (indentation > 0) {
@@ -162,11 +179,11 @@ inline const char * name<turtle_patrol_interface::srv::Patrol_Request>()
 
 template<>
 struct has_fixed_size<turtle_patrol_interface::srv::Patrol_Request>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<turtle_patrol_interface::srv::Patrol_Request>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<turtle_patrol_interface::srv::Patrol_Request>
@@ -189,20 +206,6 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: success
-  {
-    out << "success: ";
-    rosidl_generator_traits::value_to_yaml(msg.success, out);
-    out << ", ";
-  }
-
-  // member: message
-  {
-    out << "message: ";
-    rosidl_generator_traits::value_to_yaml(msg.message, out);
-    out << ", ";
-  }
-
   // member: cmd
   {
     out << "cmd: ";
@@ -215,26 +218,6 @@ inline void to_block_style_yaml(
   const Patrol_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: success
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "success: ";
-    rosidl_generator_traits::value_to_yaml(msg.success, out);
-    out << "\n";
-  }
-
-  // member: message
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "message: ";
-    rosidl_generator_traits::value_to_yaml(msg.message, out);
-    out << "\n";
-  }
-
   // member: cmd
   {
     if (indentation > 0) {
@@ -291,11 +274,11 @@ inline const char * name<turtle_patrol_interface::srv::Patrol_Response>()
 
 template<>
 struct has_fixed_size<turtle_patrol_interface::srv::Patrol_Response>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, has_fixed_size<geometry_msgs::msg::Twist>::value> {};
 
 template<>
 struct has_bounded_size<turtle_patrol_interface::srv::Patrol_Response>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, has_bounded_size<geometry_msgs::msg::Twist>::value> {};
 
 template<>
 struct is_message<turtle_patrol_interface::srv::Patrol_Response>

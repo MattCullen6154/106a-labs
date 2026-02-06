@@ -17,9 +17,14 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'turtle_name'
+#include "rosidl_runtime_c/string.h"
+
 /// Struct defined in srv/Patrol in the package turtle_patrol_interface.
 typedef struct turtle_patrol_interface__srv__Patrol_Request
 {
+  rosidl_runtime_c__String turtle_name;
   float vel;
   float omega;
   float x;
@@ -41,16 +46,12 @@ typedef struct turtle_patrol_interface__srv__Patrol_Request__Sequence
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'message'
-#include "rosidl_runtime_c/string.h"
 // Member 'cmd'
 #include "geometry_msgs/msg/detail/twist__struct.h"
 
 /// Struct defined in srv/Patrol in the package turtle_patrol_interface.
 typedef struct turtle_patrol_interface__srv__Patrol_Response
 {
-  bool success;
-  rosidl_runtime_c__String message;
   geometry_msgs__msg__Twist cmd;
 } turtle_patrol_interface__srv__Patrol_Response;
 

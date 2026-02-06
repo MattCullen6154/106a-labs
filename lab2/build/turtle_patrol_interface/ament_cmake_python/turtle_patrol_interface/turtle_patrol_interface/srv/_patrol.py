@@ -57,16 +57,28 @@ class Patrol_Request(metaclass=Metaclass_Patrol_Request):
     """Message class 'Patrol_Request'."""
 
     __slots__ = [
+        '_turtle_name',
         '_vel',
         '_omega',
+        '_x',
+        '_y',
+        '_theta',
     ]
 
     _fields_and_field_types = {
+        'turtle_name': 'string',
         'vel': 'float',
         'omega': 'float',
+        'x': 'float',
+        'y': 'float',
+        'theta': 'float',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
     )
@@ -75,8 +87,12 @@ class Patrol_Request(metaclass=Metaclass_Patrol_Request):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.turtle_name = kwargs.get('turtle_name', str())
         self.vel = kwargs.get('vel', float())
         self.omega = kwargs.get('omega', float())
+        self.x = kwargs.get('x', float())
+        self.y = kwargs.get('y', float())
+        self.theta = kwargs.get('theta', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -107,9 +123,17 @@ class Patrol_Request(metaclass=Metaclass_Patrol_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.turtle_name != other.turtle_name:
+            return False
         if self.vel != other.vel:
             return False
         if self.omega != other.omega:
+            return False
+        if self.x != other.x:
+            return False
+        if self.y != other.y:
+            return False
+        if self.theta != other.theta:
             return False
         return True
 
@@ -117,6 +141,19 @@ class Patrol_Request(metaclass=Metaclass_Patrol_Request):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def turtle_name(self):
+        """Message field 'turtle_name'."""
+        return self._turtle_name
+
+    @turtle_name.setter
+    def turtle_name(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'turtle_name' field must be of type 'str'"
+        self._turtle_name = value
 
     @builtins.property
     def vel(self):
@@ -147,6 +184,51 @@ class Patrol_Request(metaclass=Metaclass_Patrol_Request):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'omega' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._omega = value
+
+    @builtins.property
+    def x(self):
+        """Message field 'x'."""
+        return self._x
+
+    @x.setter
+    def x(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'x' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'x' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._x = value
+
+    @builtins.property
+    def y(self):
+        """Message field 'y'."""
+        return self._y
+
+    @y.setter
+    def y(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'y' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'y' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._y = value
+
+    @builtins.property
+    def theta(self):
+        """Message field 'theta'."""
+        return self._theta
+
+    @theta.setter
+    def theta(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'theta' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'theta' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._theta = value
 
 
 # Import statements for member types

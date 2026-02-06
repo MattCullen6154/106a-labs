@@ -88,13 +88,29 @@ private:
 class Init_Patrol_Request_vel
 {
 public:
-  Init_Patrol_Request_vel()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  explicit Init_Patrol_Request_vel(::turtle_patrol_interface::srv::Patrol_Request & msg)
+  : msg_(msg)
   {}
   Init_Patrol_Request_omega vel(::turtle_patrol_interface::srv::Patrol_Request::_vel_type arg)
   {
     msg_.vel = std::move(arg);
     return Init_Patrol_Request_omega(msg_);
+  }
+
+private:
+  ::turtle_patrol_interface::srv::Patrol_Request msg_;
+};
+
+class Init_Patrol_Request_turtle_name
+{
+public:
+  Init_Patrol_Request_turtle_name()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_Patrol_Request_vel turtle_name(::turtle_patrol_interface::srv::Patrol_Request::_turtle_name_type arg)
+  {
+    msg_.turtle_name = std::move(arg);
+    return Init_Patrol_Request_vel(msg_);
   }
 
 private:
@@ -112,7 +128,7 @@ template<>
 inline
 auto build<::turtle_patrol_interface::srv::Patrol_Request>()
 {
-  return turtle_patrol_interface::srv::builder::Init_Patrol_Request_vel();
+  return turtle_patrol_interface::srv::builder::Init_Patrol_Request_turtle_name();
 }
 
 }  // namespace turtle_patrol_interface
@@ -130,45 +146,13 @@ namespace builder
 class Init_Patrol_Response_cmd
 {
 public:
-  explicit Init_Patrol_Response_cmd(::turtle_patrol_interface::srv::Patrol_Response & msg)
-  : msg_(msg)
+  Init_Patrol_Response_cmd()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
   ::turtle_patrol_interface::srv::Patrol_Response cmd(::turtle_patrol_interface::srv::Patrol_Response::_cmd_type arg)
   {
     msg_.cmd = std::move(arg);
     return std::move(msg_);
-  }
-
-private:
-  ::turtle_patrol_interface::srv::Patrol_Response msg_;
-};
-
-class Init_Patrol_Response_message
-{
-public:
-  explicit Init_Patrol_Response_message(::turtle_patrol_interface::srv::Patrol_Response & msg)
-  : msg_(msg)
-  {}
-  Init_Patrol_Response_cmd message(::turtle_patrol_interface::srv::Patrol_Response::_message_type arg)
-  {
-    msg_.message = std::move(arg);
-    return Init_Patrol_Response_cmd(msg_);
-  }
-
-private:
-  ::turtle_patrol_interface::srv::Patrol_Response msg_;
-};
-
-class Init_Patrol_Response_success
-{
-public:
-  Init_Patrol_Response_success()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  Init_Patrol_Response_message success(::turtle_patrol_interface::srv::Patrol_Response::_success_type arg)
-  {
-    msg_.success = std::move(arg);
-    return Init_Patrol_Response_message(msg_);
   }
 
 private:
@@ -186,7 +170,7 @@ template<>
 inline
 auto build<::turtle_patrol_interface::srv::Patrol_Response>()
 {
-  return turtle_patrol_interface::srv::builder::Init_Patrol_Response_success();
+  return turtle_patrol_interface::srv::builder::Init_Patrol_Response_cmd();
 }
 
 }  // namespace turtle_patrol_interface

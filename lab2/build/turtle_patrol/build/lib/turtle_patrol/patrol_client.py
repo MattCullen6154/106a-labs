@@ -21,6 +21,20 @@ class TurtlePatrolClient(Node):
         while not self._client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info(f"Service {self._service_name} not available, waiting...")
 
+        def send_request(self, args):
+            req = Patrol.Request()
+            req.turtle_name = args[1]
+            req.x = float(args[2])
+            req.y = float(args[3])
+            req.theta = float(args[4])
+            req.vel = float(args[5])
+            req.omega = float(args[6])
+
+            future = self.cli.call_async(req)
+            #rclpy.spin_until_future_complete(self, future)
+            return future.result()
+
+        """
         # Hard-coded request values 
         vel = 2.0
         omega = 1.0
@@ -33,11 +47,13 @@ class TurtlePatrolClient(Node):
 
         # Send request (async under the hood)
         self._future = self._client.call_async(req)
-
+        """
 
 def main(args=None):
     rclpy.init(args=args)
     node = TurtlePatrolClient()
+
+    response = node.send_request(sys.argv)
 
     # Block here until the service responds (simple for teaching)
     rclpy.spin_until_future_complete(node, node._future)

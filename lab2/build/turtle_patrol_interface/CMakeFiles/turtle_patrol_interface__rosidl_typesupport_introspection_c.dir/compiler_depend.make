@@ -65,8 +65,11 @@ CMakeFiles/turtle_patrol_interface__rosidl_typesupport_introspection_c.dir/rosid
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/turtle_patrol_interface/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/turtle_patrol_interface/srv/detail/patrol__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__functions.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_c__visibility_control.h \
@@ -118,6 +121,8 @@ rosidl_generator_c/turtle_patrol_interface/msg/rosidl_generator_c__visibility_co
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
 
 /usr/include/stdlib.h:
@@ -168,6 +173,8 @@ rosidl_typesupport_introspection_c/turtle_patrol_interface/msg/rosidl_typesuppor
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
 
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 rosidl_generator_c/turtle_patrol_interface/srv/detail/patrol__functions.h:
@@ -211,6 +218,8 @@ rosidl_typesupport_introspection_c/turtle_patrol_interface/srv/detail/patrol__ro
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 

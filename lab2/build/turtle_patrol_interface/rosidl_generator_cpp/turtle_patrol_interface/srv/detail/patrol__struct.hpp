@@ -39,6 +39,7 @@ struct Patrol_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->turtle_name = "";
       this->vel = 0.0f;
       this->omega = 0.0f;
       this->x = 0.0f;
@@ -48,11 +49,12 @@ struct Patrol_Request_
   }
 
   explicit Patrol_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : turtle_name(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->turtle_name = "";
       this->vel = 0.0f;
       this->omega = 0.0f;
       this->x = 0.0f;
@@ -62,6 +64,9 @@ struct Patrol_Request_
   }
 
   // field types and members
+  using _turtle_name_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _turtle_name_type turtle_name;
   using _vel_type =
     float;
   _vel_type vel;
@@ -79,6 +84,12 @@ struct Patrol_Request_
   _theta_type theta;
 
   // setters for named parameter idiom
+  Type & set__turtle_name(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->turtle_name = _arg;
+    return *this;
+  }
   Type & set__vel(
     const float & _arg)
   {
@@ -152,6 +163,9 @@ struct Patrol_Request_
   // comparison operators
   bool operator==(const Patrol_Request_ & other) const
   {
+    if (this->turtle_name != other.turtle_name) {
+      return false;
+    }
     if (this->vel != other.vel) {
       return false;
     }
@@ -211,50 +225,21 @@ struct Patrol_Response_
   explicit Patrol_Response_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : cmd(_init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->success = false;
-      this->message = "";
-    }
+    (void)_init;
   }
 
   explicit Patrol_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : message(_alloc),
-    cmd(_alloc, _init)
+  : cmd(_alloc, _init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->success = false;
-      this->message = "";
-    }
+    (void)_init;
   }
 
   // field types and members
-  using _success_type =
-    bool;
-  _success_type success;
-  using _message_type =
-    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _message_type message;
   using _cmd_type =
     geometry_msgs::msg::Twist_<ContainerAllocator>;
   _cmd_type cmd;
 
   // setters for named parameter idiom
-  Type & set__success(
-    const bool & _arg)
-  {
-    this->success = _arg;
-    return *this;
-  }
-  Type & set__message(
-    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
-  {
-    this->message = _arg;
-    return *this;
-  }
   Type & set__cmd(
     const geometry_msgs::msg::Twist_<ContainerAllocator> & _arg)
   {
@@ -304,12 +289,6 @@ struct Patrol_Response_
   // comparison operators
   bool operator==(const Patrol_Response_ & other) const
   {
-    if (this->success != other.success) {
-      return false;
-    }
-    if (this->message != other.message) {
-      return false;
-    }
     if (this->cmd != other.cmd) {
       return false;
     }

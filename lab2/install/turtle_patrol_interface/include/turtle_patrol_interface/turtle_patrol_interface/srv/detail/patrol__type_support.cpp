@@ -37,7 +37,24 @@ void Patrol_Request_fini_function(void * message_memory)
   typed_message->~Patrol_Request();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Patrol_Request_message_member_array[5] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Patrol_Request_message_member_array[6] = {
+  {
+    "turtle_name",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(turtle_patrol_interface::srv::Patrol_Request, turtle_name),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
   {
     "vel",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
@@ -128,7 +145,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Patrol_Reques
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Patrol_Request_message_members = {
   "turtle_patrol_interface::srv",  // message namespace
   "Patrol_Request",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(turtle_patrol_interface::srv::Patrol_Request),
   Patrol_Request_message_member_array,  // message members
   Patrol_Request_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -224,41 +241,7 @@ void Patrol_Response_fini_function(void * message_memory)
   typed_message->~Patrol_Response();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Patrol_Response_message_member_array[3] = {
-  {
-    "success",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(turtle_patrol_interface::srv::Patrol_Response, success),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "message",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(turtle_patrol_interface::srv::Patrol_Response, message),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Patrol_Response_message_member_array[1] = {
   {
     "cmd",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -281,7 +264,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Patrol_Respon
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Patrol_Response_message_members = {
   "turtle_patrol_interface::srv",  // message namespace
   "Patrol_Response",  // message name
-  3,  // number of fields
+  1,  // number of fields
   sizeof(turtle_patrol_interface::srv::Patrol_Response),
   Patrol_Response_message_member_array,  // message members
   Patrol_Response_init_function,  // function to initialize message memory (memory has to be allocated)

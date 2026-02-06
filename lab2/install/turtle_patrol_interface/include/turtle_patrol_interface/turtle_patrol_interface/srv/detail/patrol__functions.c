@@ -10,10 +10,19 @@
 
 #include "rcutils/allocator.h"
 
+// Include directives for member types
+// Member `turtle_name`
+#include "rosidl_runtime_c/string_functions.h"
+
 bool
 turtle_patrol_interface__srv__Patrol_Request__init(turtle_patrol_interface__srv__Patrol_Request * msg)
 {
   if (!msg) {
+    return false;
+  }
+  // turtle_name
+  if (!rosidl_runtime_c__String__init(&msg->turtle_name)) {
+    turtle_patrol_interface__srv__Patrol_Request__fini(msg);
     return false;
   }
   // vel
@@ -30,6 +39,8 @@ turtle_patrol_interface__srv__Patrol_Request__fini(turtle_patrol_interface__srv_
   if (!msg) {
     return;
   }
+  // turtle_name
+  rosidl_runtime_c__String__fini(&msg->turtle_name);
   // vel
   // omega
   // x
@@ -41,6 +52,12 @@ bool
 turtle_patrol_interface__srv__Patrol_Request__are_equal(const turtle_patrol_interface__srv__Patrol_Request * lhs, const turtle_patrol_interface__srv__Patrol_Request * rhs)
 {
   if (!lhs || !rhs) {
+    return false;
+  }
+  // turtle_name
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->turtle_name), &(rhs->turtle_name)))
+  {
     return false;
   }
   // vel
@@ -72,6 +89,12 @@ turtle_patrol_interface__srv__Patrol_Request__copy(
   turtle_patrol_interface__srv__Patrol_Request * output)
 {
   if (!input || !output) {
+    return false;
+  }
+  // turtle_name
+  if (!rosidl_runtime_c__String__copy(
+      &(input->turtle_name), &(output->turtle_name)))
+  {
     return false;
   }
   // vel
@@ -268,8 +291,6 @@ turtle_patrol_interface__srv__Patrol_Request__Sequence__copy(
 
 
 // Include directives for member types
-// Member `message`
-#include "rosidl_runtime_c/string_functions.h"
 // Member `cmd`
 #include "geometry_msgs/msg/detail/twist__functions.h"
 
@@ -277,12 +298,6 @@ bool
 turtle_patrol_interface__srv__Patrol_Response__init(turtle_patrol_interface__srv__Patrol_Response * msg)
 {
   if (!msg) {
-    return false;
-  }
-  // success
-  // message
-  if (!rosidl_runtime_c__String__init(&msg->message)) {
-    turtle_patrol_interface__srv__Patrol_Response__fini(msg);
     return false;
   }
   // cmd
@@ -299,9 +314,6 @@ turtle_patrol_interface__srv__Patrol_Response__fini(turtle_patrol_interface__srv
   if (!msg) {
     return;
   }
-  // success
-  // message
-  rosidl_runtime_c__String__fini(&msg->message);
   // cmd
   geometry_msgs__msg__Twist__fini(&msg->cmd);
 }
@@ -310,16 +322,6 @@ bool
 turtle_patrol_interface__srv__Patrol_Response__are_equal(const turtle_patrol_interface__srv__Patrol_Response * lhs, const turtle_patrol_interface__srv__Patrol_Response * rhs)
 {
   if (!lhs || !rhs) {
-    return false;
-  }
-  // success
-  if (lhs->success != rhs->success) {
-    return false;
-  }
-  // message
-  if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->message), &(rhs->message)))
-  {
     return false;
   }
   // cmd
@@ -337,14 +339,6 @@ turtle_patrol_interface__srv__Patrol_Response__copy(
   turtle_patrol_interface__srv__Patrol_Response * output)
 {
   if (!input || !output) {
-    return false;
-  }
-  // success
-  output->success = input->success;
-  // message
-  if (!rosidl_runtime_c__String__copy(
-      &(input->message), &(output->message)))
-  {
     return false;
   }
   // cmd

@@ -11,9 +11,17 @@ class Turtle1PatrolServer(Node):
     def __init__(self):
         super().__init__('turtle1_patrol_server')
 
+        # Create dict keyed on turtle_name
+        # Nest dicts ie turtles = {"turtle_name" : {state dict}}
+        self.turtles = {}
+
         # Publisher: actually drives turtle1
-        self._cmd_pub = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
-        self._srv = self.create_service(Patrol, '/turtle1/patrol', self.patrol_callback)
+
+        # Changed '/turtle1/cmd_vel' to f'/{turtle_name}/cmd_vel'
+        # and '/turtle1/patrol' to f'/{turtle_name}/patrol'
+        #Moing these to helper
+        #self._cmd_pub = self.create_publisher(Twist, f'/{turtle_name}/cmd_vel', 10)
+        self._srv = self.create_service(Patrol, f'/{turtle_name}/patrol', self.patrol_callback)
 
         # Current commanded speeds (what timer publishes)
         self._lin = 0.0
@@ -23,6 +31,21 @@ class Turtle1PatrolServer(Node):
         self._pub_timer = self.create_timer(0.1, self._publish_current_cmd)
 
         self.get_logger().info('Turtle1PatrolServer ready (continuous publish mode).')
+
+    def ensure_turtle(self, turtle_name: str):
+        if turtle_name in self.turtles:
+            return self.turtles[turtle_name]
+        
+        pub = self.create_publisher(Twist, f'/{turtle_name}/cmd_vel', 10)
+        tp = self.create_client(TeleportAbsolute, f"/{turtle_name}/teleport_absolute")
+
+        self.turtles[turtle_name] = {
+            "pub": pub,
+            "teleport": tp,
+            "vel": 0.0,
+            "omega": 0.0
+        }
+        return self.turtles[turtle_name]
 
     # -------------------------------------------------------
     # Timer publishes current Twist

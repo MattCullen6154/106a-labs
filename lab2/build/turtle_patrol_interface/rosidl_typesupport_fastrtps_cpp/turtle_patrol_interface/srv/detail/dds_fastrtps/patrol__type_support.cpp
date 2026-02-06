@@ -32,6 +32,8 @@ cdr_serialize(
   const turtle_patrol_interface::srv::Patrol_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
+  // Member: turtle_name
+  cdr << ros_message.turtle_name;
   // Member: vel
   cdr << ros_message.vel;
   // Member: omega
@@ -51,6 +53,9 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   turtle_patrol_interface::srv::Patrol_Request & ros_message)
 {
+  // Member: turtle_name
+  cdr >> ros_message.turtle_name;
+
   // Member: vel
   cdr >> ros_message.vel;
 
@@ -82,6 +87,10 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
+  // Member: turtle_name
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.turtle_name.size() + 1);
   // Member: vel
   {
     size_t item_size = sizeof(ros_message.vel);
@@ -135,6 +144,19 @@ max_serialized_size_Patrol_Request(
   full_bounded = true;
   is_plain = true;
 
+
+  // Member: turtle_name
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
 
   // Member: vel
   {
@@ -349,10 +371,6 @@ cdr_serialize(
   const turtle_patrol_interface::srv::Patrol_Response & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: success
-  cdr << (ros_message.success ? true : false);
-  // Member: message
-  cdr << ros_message.message;
   // Member: cmd
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.cmd,
@@ -366,16 +384,6 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   turtle_patrol_interface::srv::Patrol_Response & ros_message)
 {
-  // Member: success
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.success = tmp ? true : false;
-  }
-
-  // Member: message
-  cdr >> ros_message.message;
-
   // Member: cmd
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.cmd);
@@ -396,16 +404,6 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: success
-  {
-    size_t item_size = sizeof(ros_message.success);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: message
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.message.size() + 1);
   // Member: cmd
 
   current_alignment +=
@@ -434,27 +432,6 @@ max_serialized_size_Patrol_Response(
   full_bounded = true;
   is_plain = true;
 
-
-  // Member: success
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: message
-  {
-    size_t array_size = 1;
-
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
-  }
 
   // Member: cmd
   {

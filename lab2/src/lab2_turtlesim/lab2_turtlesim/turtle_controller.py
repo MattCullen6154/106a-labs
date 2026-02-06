@@ -47,11 +47,7 @@ def main(args=None):
 
     turtle_name = sys.argv[1]
     #adding extra CLI fields
-    x = sys.argv[2]
-    y = sys.argv[3]
-    theta = sys.argv[4]
-    velocity = sys.argv[5]
-    omega = sys.argv[6]
+
 
     node = Turtle_Controller(turtle_name)
     

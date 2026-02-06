@@ -46,6 +46,9 @@ def main(args=None):
         return
 
     turtle_name = sys.argv[1]
+    #adding extra CLI fields
+
+
     node = Turtle_Controller(turtle_name)
     
     try:

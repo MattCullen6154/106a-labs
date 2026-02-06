@@ -7,6 +7,8 @@
 module turtle_patrol_interface {
   module srv {
     struct Patrol_Request {
+      string turtle_name;
+
       float vel;
 
       float omega;
@@ -18,10 +20,6 @@ module turtle_patrol_interface {
       float theta;
     };
     struct Patrol_Response {
-      boolean success;
-
-      string message;
-
       geometry_msgs::msg::Twist cmd;
     };
   };

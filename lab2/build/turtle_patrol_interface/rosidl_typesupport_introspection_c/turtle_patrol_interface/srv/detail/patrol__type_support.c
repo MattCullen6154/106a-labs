@@ -12,6 +12,10 @@
 #include "turtle_patrol_interface/srv/detail/patrol__struct.h"
 
 
+// Include directives for member types
+// Member `turtle_name`
+#include "rosidl_runtime_c/string_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -31,7 +35,24 @@ void turtle_patrol_interface__srv__Patrol_Request__rosidl_typesupport_introspect
   turtle_patrol_interface__srv__Patrol_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember turtle_patrol_interface__srv__Patrol_Request__rosidl_typesupport_introspection_c__Patrol_Request_message_member_array[5] = {
+static rosidl_typesupport_introspection_c__MessageMember turtle_patrol_interface__srv__Patrol_Request__rosidl_typesupport_introspection_c__Patrol_Request_message_member_array[6] = {
+  {
+    "turtle_name",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(turtle_patrol_interface__srv__Patrol_Request, turtle_name),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
   {
     "vel",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
@@ -122,7 +143,7 @@ static rosidl_typesupport_introspection_c__MessageMember turtle_patrol_interface
 static const rosidl_typesupport_introspection_c__MessageMembers turtle_patrol_interface__srv__Patrol_Request__rosidl_typesupport_introspection_c__Patrol_Request_message_members = {
   "turtle_patrol_interface__srv",  // message namespace
   "Patrol_Request",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(turtle_patrol_interface__srv__Patrol_Request),
   turtle_patrol_interface__srv__Patrol_Request__rosidl_typesupport_introspection_c__Patrol_Request_message_member_array,  // message members
   turtle_patrol_interface__srv__Patrol_Request__rosidl_typesupport_introspection_c__Patrol_Request_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -169,8 +190,6 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 
 
 // Include directives for member types
-// Member `message`
-#include "rosidl_runtime_c/string_functions.h"
 // Member `cmd`
 #include "geometry_msgs/msg/twist.h"
 // Member `cmd`
@@ -195,41 +214,7 @@ void turtle_patrol_interface__srv__Patrol_Response__rosidl_typesupport_introspec
   turtle_patrol_interface__srv__Patrol_Response__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember turtle_patrol_interface__srv__Patrol_Response__rosidl_typesupport_introspection_c__Patrol_Response_message_member_array[3] = {
-  {
-    "success",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(turtle_patrol_interface__srv__Patrol_Response, success),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "message",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(turtle_patrol_interface__srv__Patrol_Response, message),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
+static rosidl_typesupport_introspection_c__MessageMember turtle_patrol_interface__srv__Patrol_Response__rosidl_typesupport_introspection_c__Patrol_Response_message_member_array[1] = {
   {
     "cmd",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -252,7 +237,7 @@ static rosidl_typesupport_introspection_c__MessageMember turtle_patrol_interface
 static const rosidl_typesupport_introspection_c__MessageMembers turtle_patrol_interface__srv__Patrol_Response__rosidl_typesupport_introspection_c__Patrol_Response_message_members = {
   "turtle_patrol_interface__srv",  // message namespace
   "Patrol_Response",  // message name
-  3,  // number of fields
+  1,  // number of fields
   sizeof(turtle_patrol_interface__srv__Patrol_Response),
   turtle_patrol_interface__srv__Patrol_Response__rosidl_typesupport_introspection_c__Patrol_Response_message_member_array,  // message members
   turtle_patrol_interface__srv__Patrol_Response__rosidl_typesupport_introspection_c__Patrol_Response_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -270,7 +255,7 @@ static rosidl_message_type_support_t turtle_patrol_interface__srv__Patrol_Respon
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_turtle_patrol_interface
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, turtle_patrol_interface, srv, Patrol_Response)() {
-  turtle_patrol_interface__srv__Patrol_Response__rosidl_typesupport_introspection_c__Patrol_Response_message_member_array[2].members_ =
+  turtle_patrol_interface__srv__Patrol_Response__rosidl_typesupport_introspection_c__Patrol_Response_message_member_array[0].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, geometry_msgs, msg, Twist)();
   if (!turtle_patrol_interface__srv__Patrol_Response__rosidl_typesupport_introspection_c__Patrol_Response_message_type_support_handle.typesupport_identifier) {
     turtle_patrol_interface__srv__Patrol_Response__rosidl_typesupport_introspection_c__Patrol_Response_message_type_support_handle.typesupport_identifier =

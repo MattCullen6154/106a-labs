@@ -34,6 +34,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/string.h"  // turtle_name
+#include "rosidl_runtime_c/string_functions.h"  // turtle_name
 
 // forward declare type support functions
 
@@ -49,6 +51,20 @@ static bool _Patrol_Request__cdr_serialize(
     return false;
   }
   const _Patrol_Request__ros_msg_type * ros_message = static_cast<const _Patrol_Request__ros_msg_type *>(untyped_ros_message);
+  // Field name: turtle_name
+  {
+    const rosidl_runtime_c__String * str = &ros_message->turtle_name;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
   // Field name: vel
   {
     cdr << ros_message->vel;
@@ -86,6 +102,22 @@ static bool _Patrol_Request__cdr_deserialize(
     return false;
   }
   _Patrol_Request__ros_msg_type * ros_message = static_cast<_Patrol_Request__ros_msg_type *>(untyped_ros_message);
+  // Field name: turtle_name
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->turtle_name.data) {
+      rosidl_runtime_c__String__init(&ros_message->turtle_name);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->turtle_name,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'turtle_name'\n");
+      return false;
+    }
+  }
+
   // Field name: vel
   {
     cdr >> ros_message->vel;
@@ -128,6 +160,10 @@ size_t get_serialized_size_turtle_patrol_interface__srv__Patrol_Request(
   (void)padding;
   (void)wchar_size;
 
+  // field.name turtle_name
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->turtle_name.size + 1);
   // field.name vel
   {
     size_t item_size = sizeof(ros_message->vel);
@@ -187,6 +223,18 @@ size_t max_serialized_size_turtle_patrol_interface__srv__Patrol_Request(
   full_bounded = true;
   is_plain = true;
 
+  // member: turtle_name
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
   // member: vel
   {
     size_t array_size = 1;
@@ -325,8 +373,6 @@ extern "C"
 #endif
 
 #include "geometry_msgs/msg/detail/twist__functions.h"  // cmd
-#include "rosidl_runtime_c/string.h"  // message
-#include "rosidl_runtime_c/string_functions.h"  // message
 
 // forward declare type support functions
 ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_turtle_patrol_interface
@@ -356,25 +402,6 @@ static bool _Patrol_Response__cdr_serialize(
     return false;
   }
   const _Patrol_Response__ros_msg_type * ros_message = static_cast<const _Patrol_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: success
-  {
-    cdr << (ros_message->success ? true : false);
-  }
-
-  // Field name: message
-  {
-    const rosidl_runtime_c__String * str = &ros_message->message;
-    if (str->capacity == 0 || str->capacity <= str->size) {
-      fprintf(stderr, "string capacity not greater than size\n");
-      return false;
-    }
-    if (str->data[str->size] != '\0') {
-      fprintf(stderr, "string not null-terminated\n");
-      return false;
-    }
-    cdr << str->data;
-  }
-
   // Field name: cmd
   {
     const message_type_support_callbacks_t * callbacks =
@@ -401,29 +428,6 @@ static bool _Patrol_Response__cdr_deserialize(
     return false;
   }
   _Patrol_Response__ros_msg_type * ros_message = static_cast<_Patrol_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: success
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->success = tmp ? true : false;
-  }
-
-  // Field name: message
-  {
-    std::string tmp;
-    cdr >> tmp;
-    if (!ros_message->message.data) {
-      rosidl_runtime_c__String__init(&ros_message->message);
-    }
-    bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->message,
-      tmp.c_str());
-    if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'message'\n");
-      return false;
-    }
-  }
-
   // Field name: cmd
   {
     const message_type_support_callbacks_t * callbacks =
@@ -455,16 +459,6 @@ size_t get_serialized_size_turtle_patrol_interface__srv__Patrol_Response(
   (void)padding;
   (void)wchar_size;
 
-  // field.name success
-  {
-    size_t item_size = sizeof(ros_message->success);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name message
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->message.size + 1);
   // field.name cmd
 
   current_alignment += get_serialized_size_geometry_msgs__msg__Twist(
@@ -498,25 +492,6 @@ size_t max_serialized_size_turtle_patrol_interface__srv__Patrol_Response(
   full_bounded = true;
   is_plain = true;
 
-  // member: success
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // member: message
-  {
-    size_t array_size = 1;
-
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
-  }
   // member: cmd
   {
     size_t array_size = 1;
