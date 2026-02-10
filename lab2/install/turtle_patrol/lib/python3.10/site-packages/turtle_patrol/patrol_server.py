@@ -34,12 +34,12 @@ class Turtle1PatrolServer(Node):
         
         pub = self.create_publisher(Twist, f'/{name}/cmd_vel', 10)
         tp = self.create_client(TeleportAbsolute, f"/{name}/teleport_absolute")
-
+        self.get_logger().info(f"Turtle: {name}: {turtles[name].items()}")
         self.turtles[name] = {
             "pub": pub,
             "teleport": tp,
-            "vel": 0.0,
-            "omega": 0.0
+            "vel": 2.0,
+            "omega": 2.0 #hardcoded get from turtle items
         }
         self.get_logger().info(f"Registered turtle '{name}")
         return self.turtles[name]
@@ -76,7 +76,7 @@ class Turtle1PatrolServer(Node):
             tw.angular.z = float(st["omega"])
             st["pub"].publish(tw)
 
-            self.get_logger().warn(f"PUBLISH {name}: lin.x={tw.linear.x} ang.z={tw.angular.z}")
+            #self.get_logger().warn(f"PUBLISH {name}: lin.x={tw.linear.x} ang.z={tw.angular.z}")
 
     # -------------------------------------------------------
     # Service callback: update speeds
