@@ -19,8 +19,8 @@ class Turtle1PatrolServer(Node):
         
 
         # Current commanded speeds (what timer publishes)
-        self._lin = 0.0
-        self._ang = 0.0
+        #self._lin = 0.0
+        #self._ang = 0.0
 
         # Timer: publish current speeds at 10 Hz
         
@@ -34,12 +34,12 @@ class Turtle1PatrolServer(Node):
         
         pub = self.create_publisher(Twist, f'/{name}/cmd_vel', 10)
         tp = self.create_client(TeleportAbsolute, f"/{name}/teleport_absolute")
-        self.get_logger().info(f"Turtle: {name}: {turtles[name].items()}")
+       # self.get_logger().info(f"Turtle: {name}: {turtles[name].items()}")
         self.turtles[name] = {
             "pub": pub,
             "teleport": tp,
-            "vel": 2.0,
-            "omega": 2.0 #hardcoded get from turtle items
+            "vel": 0.0,
+            "omega": 0.0 #hardcoded get from turtle items
         }
         self.get_logger().info(f"Registered turtle '{name}")
         return self.turtles[name]
