@@ -1,5 +1,0 @@
-  File "/home/cc/ee106a/sp26/class/ee106a-aac/ros_workspaces/lab2/install/lab2_turtlesim/lib/python3.10/site-packages/lab2_turtlesim/turtle_controller.py", line 19
-    left = 
-           ^
-SyntaxError: invalid syntax
-
