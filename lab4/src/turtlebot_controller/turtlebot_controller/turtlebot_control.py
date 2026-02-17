@@ -19,8 +19,8 @@ class TurtleBotController(Node):
         self.ar_frame = frame2
 
         # Note: these constants might not work for your turtlebot, be willing to tune them if it isn't reaching the goal!
-        self.K1 = 0.3
-        self.K2 = 1.0
+        self.K1 = 0.2
+        self.K2 = 0.3
 
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
@@ -35,13 +35,13 @@ class TurtleBotController(Node):
 
     def loop(self):
         try:
-            tf = self.tf_buffer.lookup_transform(self.turtle_frame, self.ar_frame, Time())
+            tf = self.tf_buffer.lookup_transform(self.turtle_frame, self.ar_frame, rclpy.time.Time())
             xe = tf.transform.translation.x #(xd-x)
             ye = tf.transform.translation.y #(yd-y)
 
             # convert error to turtle body frame
-            dist = np.sqrt (xe**2 + ye**2)
-            angle = np.arctan2(xe,ye)
+            dist = xe#np.sqrt (xe**2 + ye**2)
+            angle = -np.arctan2(ye,xe)
 
             control_cmd = Twist()
             control_cmd.linear.x = self.K1 * dist
