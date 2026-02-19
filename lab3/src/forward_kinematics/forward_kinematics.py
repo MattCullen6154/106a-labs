@@ -41,6 +41,13 @@ def ur7e_foward_kinematics_from_angles(joint_angles):
                   [0., 1., 0.]])
 
     # YOUR CODE HERE (Task 1)
+    # use q0[:, 5] = [0.817, 0.233, 0.06285] >>>>>>>>>>>>>>>> CHECK THIS (maybe don't hardcode)
+    p = q0[:, 5].reshape((3,1))
+    
+    gst0 = np.array([[-1., 0., 0., 0.817],
+                     [ 0., 0., 1., 0.233], 
+                     [ 0., 1., 0., 0.06285],
+                     [ 0., 0., 0., 1.]])
     print(R)
 
 def ur7e_forward_kinematics_from_joint_state(joint_state):

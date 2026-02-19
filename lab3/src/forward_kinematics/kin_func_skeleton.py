@@ -2,7 +2,7 @@
 """
 Kinematic function skeleton code for Lab 3 prelab.
 
-Course: EE 106A, Fall 2021
+Course: EE 106A, Spring 2026
 Originally written by: Aaron Bestick, 9/10/14
 Adapted for Fall 2020 by: Amay Saxena, 9/10/20
 
@@ -92,7 +92,6 @@ def homog_2d(xi, theta):
 
 #-----------------------------3D Functions--------------------------------------
 #-------------(These are the functions you need to complete)--------------------
-#-------------RUN THIS PYTHON FILE TO ENSURE THAT YOUR COMPLETED FUNCTIONS WORK AS INTENDED (SEE TESTS BELOW)----------
 
 def skew_3d(omega):
     """
@@ -106,6 +105,18 @@ def skew_3d(omega):
     """
 
     # YOUR CODE HERE
+    if not omega.shape == (3, ):
+        raise TypeError(f"omega dims are {omega.shape}, need to be (3, ) ")
+    
+    wx, wy, wz = omega
+
+    omega_hat = np.array([[0, -wz, wy],
+                          [wz, 0, -wx],
+                          [-wy, wx, 0]])
+    
+    return omega_hat
+
+
 
 def rotation_3d(omega, theta):
     """
@@ -120,6 +131,20 @@ def rotation_3d(omega, theta):
     """
 
     # YOUR CODE HERE
+    if omega.shape != (3,):
+        raise TypeError(f"omega dims are {omega.shape}, need to be (3, ) ")
+
+    norm_w = np.linalg.norm(omega)
+    if norm_w == 0:
+        return np.eye(3)
+
+    unit = omega / norm_w
+    phi = norm_w * theta
+    A = skew_3d(unit)
+
+    rot = np.eye(3) + np.sin(phi) * A + (1 - np.cos(phi)) * (A @ A)
+    return rot
+
 
 def hat_3d(xi):
     """
@@ -133,6 +158,17 @@ def hat_3d(xi):
     """
 
     # YOUR CODE HERE
+    if not xi.shape == (6, ):
+        raise TypeError(f"xi dims are {xi.shape}, need to be (6, ) ")
+    
+    w = xi[3:6]
+    v = xi[0:3]
+    #rot = skew_3d(w)
+    xi_hat = np.zeros((4,4)) # make blank 4x4
+    xi_hat[0:3, 0:3] = skew_3d(w) # add rotation to top left
+    xi_hat[0:3, 3] = v #add v to col 4
+
+    return xi_hat
 
 def homog_3d(xi, theta):
     """
@@ -147,6 +183,33 @@ def homog_3d(xi, theta):
     """
 
     # YOUR CODE HERE
+    if not xi.shape == (6, ):
+        raise TypeError(f"xi dims are {xi.shape}, need to be (6, ) ")
+
+    v = xi[0:3]
+    w = xi[3:6]
+
+    g = np.eye(4)
+    
+    norm_w = np.linalg.norm(w)
+
+    # omega = 0 case
+    if norm_w == 0: 
+        g[0:3, 3] = v * theta
+        return g
+    #omega != 0 case
+    rot = rotation_3d(w, theta)
+    w_hat = skew_3d(w)
+
+    I = np.eye(3)
+    g[0:3, 0:3] = rot
+    g[0:3, 3] = (1/norm_w ** 2) * ((I - rot) @ (w_hat @ v) + np.outer(w, w) @ v * theta)
+
+    return g
+
+
+
+
 
 
 def prod_exp(xi, theta):
@@ -163,6 +226,21 @@ def prod_exp(xi, theta):
     """
 
     # YOUR CODE HERE
+    if not xi.shape[0] == 6 or xi.ndim != 2: 
+        raise TypeError("xi is wrong shape")
+    if theta.shape[0] != xi.shape[1]:
+        raise TypeError("theta is the wrong shape")
+
+    g = np.eye(4)
+
+    for i in range(xi.shape[1]):
+        g = g @ homog_3d(xi[:, i], theta[i])
+
+    return g    
+    
+
+
+    
 
 #---------------------------------TESTING CODE---------------------------------
 #-------------------------DO NOT MODIFY ANYTHING BELOW HERE--------------------
