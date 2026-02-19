@@ -41,14 +41,35 @@ def ur7e_foward_kinematics_from_angles(joint_angles):
                   [0., 1., 0.]])
 
     # YOUR CODE HERE (Task 1)
-    # use q0[:, 5] = [0.817, 0.233, 0.06285] >>>>>>>>>>>>>>>> CHECK THIS (maybe don't hardcode)
-    p = q0[:, 5].reshape((3,1))
     
+    #take p to be final q in kinematic chain (may need to change)
+    #build block matrix with R, p
+    p = q0[:, 5].reshape((3,1))
+    gst0 = np.block([[R, p],
+                     [np.zeros((1,3)), 1.]])
+
+    # use q0[:, 5] = [0.817, 0.233, 0.06285] >>>>>>>>>>>>>>>> CHECK THIS (maybe don't hardcode)
+    """
     gst0 = np.array([[-1., 0., 0., 0.817],
                      [ 0., 0., 1., 0.233], 
                      [ 0., 1., 0., 0.06285],
                      [ 0., 0., 0., 1.]])
+    """
     print(R)
+
+    # Twists 
+    # all jounts pure revolute so [q x omega, omega]
+    xi_1 = np.stack(np.cross(q0[:, 0], w0[:, 0]), w0[:, 0])
+    xi_2 = np.stack(np.cross(q0[:, 1], w0[:, 1]), w0[:, 1])
+    xi_3 = np.stack(np.cross(q0[:, 2], w0[:, 2]), w0[:, 2])
+    xi_4 = np.stack(np.cross(q0[:, 3], w0[:, 3]), w0[:, 3])
+    xi_5 = np.stack(np.cross(q0[:, 4], w0[:, 4]), w0[:, 4])
+    xi_6 = np.stack(np.cross(q0[:, 5], w0[:, 5]), w0[:, 5])
+
+    xi_array = np.array([xi_1, xi_2, xi_3, xi_4, xi_5, xi_6], dtype=np.float64).T
+
+    # this takes theta, how to calculate?
+    g = np.matmul(prod_exp)
 
 def ur7e_forward_kinematics_from_joint_state(joint_state):
     """
