@@ -69,7 +69,10 @@ def ur7e_foward_kinematics_from_angles(joint_angles):
     xi_array = np.array([xi_1, xi_2, xi_3, xi_4, xi_5, xi_6], dtype=np.float64).T
 
     # this takes theta, how to calculate?
-    g = np.matmul(prod_exp)
+    g = np.matmul(prod_exp(xi_array, joint_angles))
+
+    return g
+    
 
 def ur7e_forward_kinematics_from_joint_state(joint_state):
     """
