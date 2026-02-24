@@ -48,48 +48,49 @@ def ur7e_foward_kinematics_from_angles(joint_angles):
     gst0 = np.block([[R, p],
                      [np.zeros((1,3)), 1.]])
 
-    # use q0[:, 5] = [0.817, 0.233, 0.06285] >>>>>>>>>>>>>>>> CHECK THIS (maybe don't hardcode)
-    """
-    gst0 = np.array([[-1., 0., 0., 0.817],
-                     [ 0., 0., 1., 0.233], 
-                     [ 0., 1., 0., 0.06285],
-                     [ 0., 0., 0., 1.]])
-    """
-    print(R)
+    #print(R)
 
     # Twists 
     # all jounts pure revolute so [q x omega, omega]
-    xi_1 = np.stack(np.cross(q0[:, 0], w0[:, 0]), w0[:, 0])
-    xi_2 = np.stack(np.cross(q0[:, 1], w0[:, 1]), w0[:, 1])
-    xi_3 = np.stack(np.cross(q0[:, 2], w0[:, 2]), w0[:, 2])
-    xi_4 = np.stack(np.cross(q0[:, 3], w0[:, 3]), w0[:, 3])
-    xi_5 = np.stack(np.cross(q0[:, 4], w0[:, 4]), w0[:, 4])
-    xi_6 = np.stack(np.cross(q0[:, 5], w0[:, 5]), w0[:, 5])
+    xi_1 = np.concatenate(np.cross(q0[:, 0], w0[:, 0]), w0[:, 0])
+    xi_2 = np.concatenate(np.cross(q0[:, 1], w0[:, 1]), w0[:, 1])
+    xi_3 = np.concatenate(np.cross(q0[:, 2], w0[:, 2]), w0[:, 2])
+    xi_4 = np.concatenate(np.cross(q0[:, 3], w0[:, 3]), w0[:, 3])
+    xi_5 = np.concatenate(np.cross(q0[:, 4], w0[:, 4]), w0[:, 4])
+    xi_6 = np.concatenate(np.cross(q0[:, 5], w0[:, 5]), w0[:, 5])
 
     xi_array = np.array([xi_1, xi_2, xi_3, xi_4, xi_5, xi_6], dtype=np.float64).T
 
     # this takes theta, how to calculate?
-    g = np.matmul(prod_exp(xi_array, joint_angles))
+    g = np.matmul(kfs.prod_exp(xi_array, joint_angles), gst0)
 
     return g
     
 
 def ur7e_forward_kinematics_from_joint_state(joint_state):
     """
-    Computes the orientation of the ur7e's end-effector given the joint
-    state.
+    order in fwd_kinematics
+    w0[:, 0] = [0., 0., 1] # shoulder pan joint
+    w0[:, 1] = [0, 1., 0] # shoulder lift joint
+    w0[:, 2] = [0., 1., 0] # elbow_joint
+    w0[:, 3] = [0., 1., 0] # wrist 1
+    w0[:, 4] = [0., 0., -1] # wrist 2 
+    w0[:, 5] = [0., 1., 0] # wrist 3
 
-    Parameters
-    ----------
-    joint_state (sensor_msgs.JointState): JointState of ur7e robot
-
-    Returns
-    -------
-    (4x4) np.ndarray: homogenous transformation matrix
+    order from msg:
+    shoulder_lift_joint, elbow_joint, wrist_1_joint, 
+    wrist_2_joint, wrist_3_joint, shoulder_pan_joint
     """
-    
     angles = np.zeros(6)
     # YOUR CODE HERE (Task 2)
-    
+    angles[0] = joint_state.position[5]
+    angles[1] = joint_state.position[0]
+    angles[2] = joint_state.position[1]
+    angles[3] = joint_state.position[2]
+    angles[4] = joint_state.position[3]
+    angles[5] = joint_state.position[4]
+
+    return ur7e_foward_kinematics_from_angles(angles)
+
 
     # END YOUR CODE HERE

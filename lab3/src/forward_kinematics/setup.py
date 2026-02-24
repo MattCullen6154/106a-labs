@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+        'subscriber = py_pubsub.forward_kinematics_node.py'
         ],
     },
 )
