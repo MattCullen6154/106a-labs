@@ -83,6 +83,8 @@ def ur7e_forward_kinematics_from_joint_state(joint_state):
     """
     angles = np.zeros(6)
     # YOUR CODE HERE (Task 2)
+
+    # assumes joint positions ordered identically every time. safe?
     angles[0] = joint_state.position[5]
     angles[1] = joint_state.position[0]
     angles[2] = joint_state.position[1]
