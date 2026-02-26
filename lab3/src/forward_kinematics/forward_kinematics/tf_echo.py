@@ -12,19 +12,19 @@ class TfEcho(Node):
         self.tfBuffer = tf2_ros.Buffer()
         self.tfListener = tf2_ros.TransformListener(self.tfBuffer, self)
 
-        self.timer = self.create_timer(0.1, self.tick)
+        self.timer = self.create_timer(0.1, self.listener_callback)
 
         self.get_logger().info(f"Transform: target={target_frame}, source={source_frame}")
 
-    def tick(self):
+    def listener_callback(self):
         try:
             trans = tfBuffer.lookup_transform(target_frame, source_frame, rclpy.time.Time())
             t = trans.transform.translation
             q = trans.transform.Rotation
 
 
-            self.get_logger().info(f"translation: x={t.x: .3f}, y={t.y: .3f}, z={t.z: .3f}")
-            self.get_logger().info(f"rotation: x={q.x: .3f}, y={q.y: .3f}, z={q.z: .3f}")
+            self.get_logger().info(f"Translation: x={t.x: .3f}, y={t.y: .3f}, z={t.z: .3f}")
+            self.get_logger().info(f"Rotation: x={q.x: .3f}, y={q.y: .3f}, z={q.z: .3f}")
         
         except(tf2_ros.LookupException,
                tf2_ros.ConnectivityException, 
@@ -32,11 +32,7 @@ class TfEcho(Node):
                self.get_logger().warn(f"TF lookup failed: {ex}")
 
 def main():
-    rclpy.init()
-
-    if len(sys.argv) < 3: 
-        print("not enough args")
-        rclpy.shutdown()
+    rclpy.init(args=args)
 
     target_frame = sys.argv[1]
     source_frame = sys.argv[2]
@@ -50,5 +46,5 @@ def main():
         node.destroy_node()
         rclpy.shutdown()
 
-if __name__ == 'main':
+if __name__ == '__main__':
     main()

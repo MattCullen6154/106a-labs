@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-        'subscriber = py_pubsub.forward_kinematics_node.py',
+        'listener = forward_kinematics.forward_kinematics_node:main',
         'tf_echo = forward_kinematics.tf_echo:main',
         ],
     },
