@@ -16,7 +16,7 @@ class ForwardKinematicsNode(Node):
             10)
         self.subscription  # prevent unused variable warning
 
-    def listener_callback(self, msg)
+    def listener_callback(self, msg):
         # does this output transform matrix?
         self.get_logger().info(fk.ur7e_forward_kinematics_from_joint_state(msg))
 

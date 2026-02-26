@@ -1,8 +1,14 @@
+#!/usr/bin/env python3
+
 import tf2_ros
-import rclpy
 import sys
 from rclpy.node import Node
 from rclpy.time import Time
+import rclpy
+
+#DEBUG
+import os
+print("Running: ", os.path.abspath(__file__))
 
 class TfEcho(Node):
     def __init__(self, target_frame, source_frame):
@@ -19,13 +25,13 @@ class TfEcho(Node):
 
     def listener_callback(self):
         try:
-            trans = tfBuffer.lookup_transform(target_frame, source_frame, rclpy.time.Time())
+            trans = self.tfBuffer.lookup_transform(self.target_frame, self.source_frame, rclpy.time.Time())
             t = trans.transform.translation
-            q = trans.transform.Rotation
+            q = trans.transform.rotation
 
 
             self.get_logger().info(f"Translation: x={t.x: .3f}, y={t.y: .3f}, z={t.z: .3f}")
-            self.get_logger().info(f"Rotation: x={q.x: .3f}, y={q.y: .3f}, z={q.z: .3f}")
+            self.get_logger().info(f"Rotation: w={q.w: .3f}, x={q.x: .3f}, y={q.y: .3f}, z={q.z: .3f}")
         
         except(tf2_ros.LookupException,
                tf2_ros.ConnectivityException, 
@@ -33,7 +39,7 @@ class TfEcho(Node):
                self.get_logger().warn(f"TF lookup failed: {ex}")
 
 def main():
-    rclpy.init(args=args)
+    rclpy.init()
 
     target_frame = sys.argv[1]
     source_frame = sys.argv[2]
