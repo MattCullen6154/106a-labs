@@ -14,7 +14,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='ee106a-aac',
-    maintainer_email='matther.r.cullen1@gmail.com',
+    maintainer_email='matthew.r.cullen1@gmail.com',
     description='TODO: Package description',
     license='TODO: License declaration',
     extras_require={
@@ -24,7 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-        'subscriber = py_pubsub.forward_kinematics_node.py'
+        'subscriber = py_pubsub.forward_kinematics_node.py',
+        'tf_echo = forward_kinematics.tf_echo:main',
         ],
     },
 )

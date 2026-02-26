@@ -4,7 +4,7 @@
   <name>forward_kinematics</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="matther.r.cullen1@gmail.com">ee106a-aac</maintainer>
+  <maintainer email="matthew.r.cullen1@gmail.com">ee106a-aac</maintainer>
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>
