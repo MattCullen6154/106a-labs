@@ -14,10 +14,11 @@ class RealSensePCSubscriber(Node):
     def __init__(self):
         super().__init__('realsense_pc_subscriber')
         self.target_frame = self.declare_parameter('target_frame', 'base_link').value
-        self.max_y = float(self.declare_parameter('max_y', 0.79).value)
 
-        self.min_z = float(self.declare_parameter('min_z', -0.18).value)
-        self.max_z = float(self.declare_parameter('max_z', -0.15).value)
+        self.max_y = float(self.declare_parameter('max_y', 0.7).value) #original 0.79
+        self.min_z = float(self.declare_parameter('min_z', -0.18).value) #-0.18
+        self.max_z = float(self.declare_parameter('max_z', -0.15).value) #-.15
+
         self.add_on_set_parameters_callback(self._on_parameter_update)
 
         self.tf_buffer = Buffer()
@@ -26,7 +27,7 @@ class RealSensePCSubscriber(Node):
         # Subscribers
         self.pc_sub = self.create_subscription(
             PointCloud2,
-            'INSERT_TOPIC_NAME',
+            '/camera/camera/depth/color/points', 
             self.pointcloud_callback,
             10
         )
@@ -34,6 +35,10 @@ class RealSensePCSubscriber(Node):
         # Publishers
         self.cube_pose_pub = self.create_publisher(PointStamped, '/cube_pose', 1)
         self.filtered_points_pub = self.create_publisher(PointCloud2, '/filtered_points', 1)
+
+        # Add header to cube_pose_pub
+        #self.cube_pose_pub.header.stamp = self.get_clock().now().to_msg()
+        #self.cube_pose_pub.header.frame_id = 'base_link'
 
         self.get_logger().info("Subscribed to PointCloud2 topic and marker publisher ready")
 
@@ -45,14 +50,14 @@ class RealSensePCSubscriber(Node):
         # Filter points between z coords between min_z and max_z and max_y
         # Call the numpy array filtered_points
 
-        source_frame = _______ # TODO: Fill in the source frame based on what you implemented in your static TF broadcaster 
+        source_frame = 'base_link' # TODO: Fill in the source frame based on what you implemented in your static TF broadcaster 
         try:
-            tf = self.tf_buffer.lookup_transform(_______, _______, Time()) # TODO: the entire tf lookup params should be filled in
+            tf = self.tf_buffer.lookup_transform('base_link', 'camera_depth_optical_frame', Time()) # TODO: the entire tf lookup params should be filled in
         except TransformException as ex:
             self.get_logger().warn(f'Could not transform {source_frame} to {self.target_frame}: {ex}')
             return
 
-        transformed_cloud = do_transform_cloud(_______, _______) # TODO: look what do_transform_cloud takes in and outputs
+        transformed_cloud = do_transform_cloud(msg, tf) # TODO: look what do_transform_cloud takes in and outputs
 
         raw_points = pc2.read_points(
             transformed_cloud,
@@ -64,8 +69,21 @@ class RealSensePCSubscriber(Node):
                 (raw_points['x'], raw_points['y'], raw_points['z'])
             ).astype(np.float32, copy=False)
 
+        #print(points_base.shape)
+
         # TODO: Create masks based on the specified min, max y and z parameters above in order to filter points
-        filtered_points = _______
+        #mask_x = [True for pt in points_base[:, 0]]
+        mask_y = points_base[:, 1] <= self.max_y
+        mask_z = (points_base[:, 2] >= self.min_z) & (points_base[:, 2] <= self.max_z)
+
+        """ 
+        mask_y = [pt <= self.max_y for pt in points_base[:, 1]]
+        mask_z = [pt >= self.min_z and pt <= self.max_z for pt in points_base[:, 2]]
+
+        mask = mask_x and mask_y and mask_z
+        """
+        filtered_points = points_base[mask_y & mask_z]
+        #print(filtered_points)
 
         if filtered_points.size == 0:
             self.get_logger().warn(
@@ -77,15 +95,22 @@ class RealSensePCSubscriber(Node):
             transformed_cloud.header,
             filtered_points.tolist(),
         )
+
         self.filtered_points_pub.publish(filtered_cloud)
 
         # TODO: Compute cube position in base_link frame using filtered_points.
-        cube_x = _______
-        cube_y = _______
-        cube_z = _______
+        cube_x = np.mean(filtered_points[:, 0])
+        cube_y = np.mean(filtered_points[:, 1])
+        cube_z = np.mean(filtered_points[:, 2])
 
         # TODO: Publish the cube pose message with the cube position information
-        cube_pose = _______
+        cube_pose = PointStamped()
+        cube_pose.point.x = float(cube_x)
+        cube_pose.point.y = float(cube_y)
+        cube_pose.point.z = float(cube_z)
+
+        cube_pose.header.stamp = self.get_clock().now().to_msg()
+        cube_pose.header.frame_id = 'base_link'
 
         self.cube_pose_pub.publish(cube_pose)
 

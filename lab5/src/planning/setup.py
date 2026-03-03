@@ -26,7 +26,9 @@ setup(
             'tf = planning.static_tf_transform:main',
             'ik = planning.ik:main',
             'transform_cube_pose = planning.transform_cube_pose:main',
-            'gripper = planning.gripper:main'
+            'gripper = planning.gripper:main',
+            'cube_pose = planning.process_pointcloud:main',
+            'filtered_points = planning.process_pointcloud:main'
         ],
     },
 )
