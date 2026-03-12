@@ -62,28 +62,49 @@ class UR7e_CubeGrasp(Node):
         Use the following offsets for pre-grasp position:
         z offset: +0.185 (to be above the cube by accounting for gripper length)
         '''
-        ...
-        self.job_queue.append(...)
+        self.ik_planner.get_logger().info("Computing IK for pre-grasp position...")
+        pre_grasp_joints = self.ik_planner.compute_ik(
+            self.joint_state,
+            cube_pose.point.x,
+            cube_pose.point.y,
+            cube_pose.point.z + 0.185
+        )
+        self.job_queue.append(pre_grasp_joints)
+
 
         # 2) Move to Grasp Position (lower the gripper to the cube)
         '''
         Note that this will again be defined relative to the cube pose. 
         DO NOT CHANGE z offset lower than +0.14. 
         '''
-
+        grasp_joints = self.ik_planner.compute_ik(
+            self.joint_state,
+            cube_pose.point.x,
+            cube_pose.point.y,
+            cube_pose.point.z + 0.15
+        )
+        self.job_queue.append(grasp_joints)
         # 3) Close the gripper. See job_queue entries defined in init above for how to add this action.
-        ...
+        self.job_queue.append('toggle_grip')
         
         # 4) Move back to Pre-Grasp Position
+        self.job_queue.append(pre_grasp_joints)
 
         # 5) Move to release Position
         '''
         We want the release position to be 0.3m to the left of the initial cube pose.
         Which offset will you change to achieve this and in what direction?
         '''
+        release_joints = self.ik_planner.compute_ik(
+            self.joint_state,
+            self.cube_pose.point.x + 0.3,
+            self.cube_pose.point.y,
+            self.cube_pose.point.z + 0.185
+        )
+        self.job_queue.append(release_joints)
 
         # 6) Release the gripper
-        ...
+        self.job_queue.append('toggle_grip')
 
         self.execute_jobs()
 

@@ -64,7 +64,12 @@ def generate_launch_description():
         }.items(),
     )
 
-    ik_planner_node = _______
+    ik_planner_node = Node(
+        package='planning',
+        executable='ik_planner',
+        name='ik_planner_node',
+        output='screen'
+    )
 
     # -------------------------
     # Global shutdown on any process exit

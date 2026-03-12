@@ -45,32 +45,48 @@ class IKPlanner(Node):
     # TODO: Compute IK for a given (x, y, z) + quat and current robot joint state
     # -----------------------------------------------------------
     def compute_ik(self, current_joint_state, x, y, z,
-                   qx=0.0, qy=1.0, qz=0.0, qw=0.0): # Think about why the default quaternion is like this. Why is qy=1?
+                   qx=0.0, qy=1.0, qz=0.0, qw=0.0): # Think about why the default quaternion 
+                   # is like this. Why is qy=1?
         pose = PoseStamped()
         pose.header.frame_id = 'base_link'
-        pose.pose = _______ # TODO: There are multiple parts/lines to fill here!
-
+        #pose.pose = Pose() # TODO: There are multiple parts/lines to fill here!
+        pose.pose.position.x = x
+        pose.pose.position.y = y
+        pose.pose.position.z = z
+        pose.pose.orientation.x = qx
+        pose.pose.orientation.y = qy
+        pose.pose.orientation.z = qz
+        pose.pose.orientation.w = qw
 
         ik_req = GetPositionIK.Request()
-        # TODO: Lookup the format for ik request and build ik_req by filling in necessary parameters. What is your end-effector link name?
+        # TODO: Lookup the format for ik request and build ik_req by filling in 
+        # necessary parameters. What is your end-effector link name?
         ik_req.ik_request.avoid_collisions = True
         ik_req.ik_request.timeout = Duration(sec=5)
         ik_req.ik_request.group_name = 'ur_manipulator'
-        
+        ik_req.ik_request.pose_stamped = pose
+        ik_req.ik_request.robot_state.joint_state = current_joint_state
+        ik_req.ik_request.ik_link_name = 'wrist_3_link' 
+        print("DEBUG: IK request built with pose:", pose)
 
         future = self.ik_client.call_async(ik_req)
         rclpy.spin_until_future_complete(self, future)
 
         if future.result() is None:
             self.get_logger().error('IK service failed.')
+            print("DEBUG: IK service call returned None.")
             return None
 
         result = future.result()
+        print("Result: ", result)
         if result.error_code.val != result.error_code.SUCCESS:
             self.get_logger().error(f'IK failed, code: {result.error_code.val}')
+            # this is being printed
+            print(f"DEBUG: IK result error code: {result.error_code.val}")
             return None
 
         self.get_logger().info('IK solution found.')
+        print("DEBUG: IK solution joint state:", result.solution.joint_state)
         return result.solution.joint_state
 
     # -----------------------------------------------------------
