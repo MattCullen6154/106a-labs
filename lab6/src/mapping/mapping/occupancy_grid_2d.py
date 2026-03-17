@@ -75,11 +75,15 @@ class OccupancyGrid2d(Node):
         # TODO! You'll need to set values for class variables called:
         # -- self._sensor_topic
         # -- self._vis_topic
+        self._sensor_topic = self.declare_parameter("topics/sensor", "/scan").value
+        self._vis_topic = self.declare_parameter("topics/vis", "/map_vis")
 
         # Frames.
         # TODO! You'll need to set values for class variables called:
         # -- self._sensor_frame
         # -- self._fixed_frame
+        self._sensor_frame = self.declare_parameter("frames/sensor", "base_scan").value
+        self._fixed_frame = self.declare_parameter("frames/fixed", "odom").value
 
         return True
 
@@ -136,6 +140,9 @@ class OccupancyGrid2d(Node):
             
             # Get angle of this ray in fixed frame.
             # TODO!
+            angle = msg.angle_min + idx * msg.angle_increment
+
+
 
             if r > msg.range_max or r < msg.range_min:
                 continue
@@ -145,6 +152,17 @@ class OccupancyGrid2d(Node):
             # Only update each voxel once. 
             # The occupancy grid is stored in self._map
             # TODO!
+            for ray_r in np.arange(r, 0, -self._x_res / 2):
+                ray_x = sensor_x + ray_r * np.cos(yaw + angle)
+                ray_y = sensor_y + ray_r * np.sin(yaw + angle)
+                voxel = self.point_to_voxel(ray_x, ray_y)
+                if voxel is None:
+                    continue
+                ii, jj = voxel
+                if self._map[ii, jj] < self._free_threshold:
+                    self._map[ii, jj] += self._free_update
+                else:
+                    break
         # Visualize.
         self.visualize()
 
