@@ -49,14 +49,29 @@ class OccupancyGrid2d(Node):
 
          # Dimensions and bounds.
         # TODO! You'll need to set values for class variables called:
-        self._x_num = self.declare_parameter("x/num", 25).value
-        self._x_min = self.declare_parameter("x/min", -10.0).value
-        self._x_max = self.declare_parameter("x/max", 10.0).value
+        self.declare_parameter("x/num", 25)
+        self._x_num = self.get_parameter("x/num").value
+
+        self.declare_parameter("x/min", -10.0)
+        self._x_min = self.get_parameter("x/min").value
+
+
+        self.declare_parameter("x/max", 10.0)
+        self._x_max = self.get_parameter("x/max").value
+
         self._x_res = (self._x_max - self._x_min) / self._x_num  # The resolution in x. Note: This isn't a ROS parameter. What will you do instead?
-        self._y_num = self.declare_parameter("y/num", 25).value
-        self._y_min = self.declare_parameter("y/min", -10.0).value
-        self._y_max = self.declare_parameter("y/max", 10.0).value
+
+        self.declare_parameter("y/num", 25)
+        self._y_num = self.get_parameter("y/num").value
+
+        self.declare_parameter("y/min", -10.0)
+        self._y_min = self.get_parameter("y/min").value
+
+        self.declare_parameter("y/max", 10.0)
+        self._y_max = self.get_parameter("y/max").value
+
         self._y_res = (self._y_max - self._y_min) / self._y_num  # The resolution in y. Note: This isn't a ROS parameter. What will you do instead?
+
 
         self.declare_parameter("update/occupied", 0.7)
         self._occupied_update = self.probability_to_logodds(
@@ -75,15 +90,19 @@ class OccupancyGrid2d(Node):
         # TODO! You'll need to set values for class variables called:
         # -- self._sensor_topic
         # -- self._vis_topic
-        self._sensor_topic = self.declare_parameter("topics/sensor", "/scan").value
-        self._vis_topic = self.declare_parameter("topics/vis", "/map_vis")
+        self.declare_parameter("topics/sensor", "/scan")
+        self._sensor_topic = self.get_parameter("topics/sensor").value
+        self.declare_parameter("topics/vis", "/map_vis")
+        self._vis_topic = self.get_parameter("topics/vis").value
 
         # Frames.
         # TODO! You'll need to set values for class variables called:
         # -- self._sensor_frame
         # -- self._fixed_frame
-        self._sensor_frame = self.declare_parameter("frames/sensor", "base_scan").value
-        self._fixed_frame = self.declare_parameter("frames/fixed", "odom").value
+        self.declare_parameter("frames/sensor", "base_scan")
+        self._sensor_frame = self.get_parameter("frames/sensor").value
+        self.declare_parameter("frames/fixed", "odom")
+        self._fixed_frame = self.get_parameter("frames/fixed").value
 
         return True
 
@@ -140,10 +159,10 @@ class OccupancyGrid2d(Node):
             
             # Get angle of this ray in fixed frame.
             # TODO!
-            angle = msg.angle_min + idx * msg.angle_increment
+            # add yaw of robot to convert to fixed frame 
+            angle = yaw + msg.angle_min + idx * msg.angle_increment
 
-
-
+            #r = distance from snsor to object along ray at index idx
             if r > msg.range_max or r < msg.range_min:
                 continue
 
@@ -152,17 +171,33 @@ class OccupancyGrid2d(Node):
             # Only update each voxel once. 
             # The occupancy grid is stored in self._map
             # TODO!
-            for ray_r in np.arange(r, 0, -self._x_res / 2):
-                ray_x = sensor_x + ray_r * np.cos(yaw + angle)
-                ray_y = sensor_y + ray_r * np.sin(yaw + angle)
-                voxel = self.point_to_voxel(ray_x, ray_y)
-                if voxel is None:
+            update = set()  # set of voxels updated along this ray
+            for i in np.arange(r, 0, -self._x_res/2):
+                x = sensor_x + i * np.cos(angle)
+                y = sensor_y + i * np.sin(angle)
+
+                
+                if self.point_to_voxel(x, y) is None:
                     continue
-                ii, jj = voxel
-                if self._map[ii, jj] < self._free_threshold:
-                    self._map[ii, jj] += self._free_update
-                else:
-                    break
+                voxel = self.point_to_voxel(x, y)
+                if voxel in update:
+                    continue
+                xv, yv = self.point_to_voxel(x, y)
+                logodds = self._map[xv, yv]
+                
+                if i == r:
+                    #update occupied voxel at the end of the ray
+                    logodds = min(logodds + self._occupied_update, self._occupied_threshold)
+                    self._map[xv, yv] = logodds
+
+                else: #update free voxels along the ray
+                    logodds = max(logodds + self._free_update, self._free_threshold)
+                    self._map[xv, yv] = logodds
+                
+                #log thresholds
+                self._map = np.clip(self._map, self._free_threshold, self._occupied_threshold)
+                update.add(voxel)
+
         # Visualize.
         self.visualize()
 
