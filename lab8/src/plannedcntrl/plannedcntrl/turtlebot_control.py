@@ -60,16 +60,28 @@ class TurtleBotController(Node):
         waypoint_pose = PoseStamped()
         # TODO: Fill in waypoint pose message using docs for PoseStamped 
         # (recall what frame this trajectory point is in from your trajectory.py code)
-        # NOTE: The staticmethod below may be helpful
+        waypoint_pose.pose.orientation.x = self._quat_from_yaw(waypoint[2])[0]
+        waypoint_pose.pose.orientation.y = self._quat_from_yaw(waypoint[2])[1]
+        waypoint_pose.pose.orientation.z = self._quat_from_yaw(waypoint[2])[2]
+        waypoint_pose.pose.orientation.w = self._quat_from_yaw(waypoint[2])[3]
+        waypoint_pose.pose.position.x = waypoint[0]
+        waypoint_pose.pose.position.y = waypoint[1]
+        waypoint_pose.pose.position.z = 0.0
+        # NOTE: The static method below may be helpful
 
 
         # TODO: Find tf and transform waypoint to base_link
         # NOTE: do_transform_pose takes in and outputs a pose message type not PoseStamped (this is contrary to online documentation)
-        odom_to_base = ...
-        waypoint_base = ...
+        try:
+            odom_to_base = self.tf_buffer.lookup_transform('odom', 'base_link', rclpy.time.Time())
+            waypoint_base = do_transform_pose(waypoint_pose.pose, odom_to_base)
+        except:
+            return
+
 
         # TODO: Calculate proportional error terms including x_err and y_err
-        
+        x_err = self.Kp[0, 0] * waypoint_base.position.x
+        y_err = self.Kp[1, 1] * waypoint_base.position.y
 
         if abs(x_err) < 0.03 and abs(y_err) < 0.03:
             self.traj_index += 1
@@ -79,9 +91,20 @@ class TurtleBotController(Node):
             return
 
         # TODO: Update derivative and integral error terms (refer to class variables defined in init)
+
+        x_d_err = self.Kd[0, 0] * np.derivative(x_err, self.prev_x_err) if self.prev_x_err is not None else 0.0
+        y_d_err = self.Kd[1, 1] * np.derivative(y_err, self.prev_yaw_err) if self.prev_yaw_err is not None else 0.0
+
+        self.prev_x_err = self.x_i_err + x_d_err
+        self.prev_yaw_err = self.yaw_i_err + y_d_err
+        self.x_i_err += x_err
+        self.yaw_i_err += y_err
+
         
         # TODO: Generate control command from error terms 
         control_cmd = Twist()
+        control_cmd.linear.x = x_err + self.yaw_i_err + self.Kd[0, 0] * (x_err - self.prev_x_err if self.prev_x_err is not None else 0)
+        control_cmd.angular.z = y_err + self.yaw_i_err + self.Kd[1, 1] * (y_err - self.prev_yaw_err if self.prev_yaw_err is not None else 0)
         
         self.pub.publish(control_cmd)
   

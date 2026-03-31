@@ -59,7 +59,8 @@ def plan_curved_trajectory(target_position):
     # Keep trying until transform available
     while rclpy.ok():
         try:
-            trans = bonk ## TODO: Apply a lookup transform from our world frame to the turtlebot frame
+            #trans = bonk ## TODO: Apply a lookup transform from our world frame to the turtlebot frame
+            trans = tf_buffer.lookup_transform('odom', 'base_footprint', rclpy.time.Time())
             break
         except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException):
             node.get_logger().warn('TF lookup failed, retrying...')
@@ -74,8 +75,8 @@ def plan_curved_trajectory(target_position):
     roll, pitch, yaw = euler.quat2euler([q.w, q.x, q.y, q.z])
 
     # Compute absolute target position in odom frame
-    x2 = 0. ## TODO: How would you get x2 from our target position? Remember this is relative to x1
-    y2 = 0. ## TODO: How would you get y2 from our target position? Remember this is relative to y1
+    x2 = trans.transform.translation.x ## TODO: How would you get x2 from our target position? Remember this is relative to x1
+    y2 = trans.transform.translation.y ## TODO: How would you get y2 from our target position? Remember this is relative to y1
 
     # Generate Bézier waypoints and visualize
     waypoints = generate_bezier_waypoints(x1, y1, yaw, x2, y2, yaw, offset=0.2, num_points=10)
@@ -95,7 +96,7 @@ def main(args=None):
     plot_trajectory(waypoints)
 
     # Example: with live TF
-    # plan_curved_trajectory((0.2, 0.2))
+    plan_curved_trajectory((0.2, 0.2))
 
     rclpy.shutdown()
 
