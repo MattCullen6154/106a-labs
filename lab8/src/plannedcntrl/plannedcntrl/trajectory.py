@@ -8,7 +8,7 @@ import transforms3d.euler as euler
 from geometry_msgs.msg import TransformStamped
 
 
-def plot_trajectory(waypoints):
+def plot_trajectory(waypoints, control_points=None):
     x_vals = [p[0] for p in waypoints]
     y_vals = [p[1] for p in waypoints]
     plt.figure(figsize=(10, 6))
@@ -18,6 +18,15 @@ def plot_trajectory(waypoints):
     for x, y, theta in waypoints:
         plt.arrow(x, y, 0.05*np.cos(theta), 0.05*np.sin(theta),
                   head_width=0.01, head_length=0.005, fc='blue', ec='blue')
+    # If available, draw control polygon to visualize curvature
+    if control_points is not None:
+        c1, c2 = control_points
+        p0 = np.array([x_vals[0], y_vals[0]])
+        p3 = np.array([x_vals[-1], y_vals[-1]])
+        poly_x = [p0[0], c1[0], c2[0], p3[0]]
+        poly_y = [p0[1], c1[1], c2[1], p3[1]]
+        plt.plot(poly_x, poly_y, '--', color='gray', label='Control polygon')
+        plt.scatter([c1[0], c2[0]], [c1[1], c2[1]], color='orange', s=60, zorder=6, label='Control points')
     plt.xlabel('X')
     plt.ylabel('Y')
     plt.title('Robot Trajectory')
@@ -74,13 +83,39 @@ def plan_curved_trajectory(target_position):
     # transforms3d expects [w, x, y, z]
     roll, pitch, yaw = euler.quat2euler([q.w, q.x, q.y, q.z])
 
-    # Compute absolute target position in odom frame
-    x2 = trans.transform.translation.x ## TODO: How would you get x2 from our target position? Remember this is relative to x1
-    y2 = trans.transform.translation.y ## TODO: How would you get y2 from our target position? Remember this is relative to y1
 
-    # Generate Bézier waypoints and visualize
-    waypoints = generate_bezier_waypoints(x1, y1, yaw, x2, y2, yaw, offset=0.2, num_points=10)
-    plot_trajectory(waypoints)
+    #DEBUG: x2,y2 w
+    # Validate and unpack target_position (expect a 2-sequence: (dx, dy)).
+    if target_position is None:
+        raise TypeError("target_position is None; expected a 2-tuple (dx, dy)")
+    if target_position is Ellipsis:
+        raise TypeError("target_position is Ellipsis (...). Pass a 2-tuple (dx, dy)")
+    try:
+        dx, dy = target_position
+    except Exception:
+        raise TypeError("target_position must be a sequence of two numbers (dx, dy)")
+
+    # Compute absolute target position in odom frame
+    x2 = x1 + dx
+    y2 = y1 + dy
+
+    # Compute a reasonable final heading: point toward the target
+    theta2 = math.atan2(dy, dx)
+
+    # Densify samples and use a slightly larger offset so curvature is visible
+    offset = 0.2
+    num_points = 100
+
+    # Generate Bézier waypoints and compute control points for plotting
+    waypoints = generate_bezier_waypoints(x1, y1, yaw, x2, y2, theta2, offset=offset, num_points=num_points)
+
+    # Compute control points (same formula as in generator)
+    d1 = np.array([np.cos(yaw), np.sin(yaw)])
+    d2 = np.array([-np.cos(theta2), -np.sin(theta2)])
+    c1 = np.array([x1, y1]) + offset * d1
+    c2 = np.array([x2, y2]) + offset * d2
+
+    plot_trajectory(waypoints, control_points=(c1, c2))
 
     node.destroy_node()
     return waypoints

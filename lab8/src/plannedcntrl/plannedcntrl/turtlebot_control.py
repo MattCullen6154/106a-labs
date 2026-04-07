@@ -21,9 +21,9 @@ class TurtleBotController(Node):
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 
         # Controller gains
-        self.Kp = np.diag([0.8, 1.5])
+        self.Kp = np.diag([1.0, 1.5]) # originally 0.8, 1.5
         self.Ki = np.diag([0.0, 0.0])
-        self.Kd = np.diag([0.0, 0.1])
+        self.Kd = np.diag([0.0, 0.15]) # originally 0.0, 0.1
 
         # Subscriber
         self.create_subscription(PointStamped, '/goal_point', self.planning_callback, 10)
@@ -35,6 +35,7 @@ class TurtleBotController(Node):
         self.yaw_i_err = 0.0
         self.prev_x_err = None
         self.prev_yaw_err = None
+        self.prev_time = None
 
         self.get_logger().info('TurtleBot controller node initialized.')
 
@@ -90,22 +91,27 @@ class TurtleBotController(Node):
             self.prev_yaw_err = None
             return
 
-        # TODO: Update derivative and integral error terms (refer to class variables defined in init)
+        # Update derivative and integral error terms using elapsed time
+        now = time.time()
+        dt = now - self.prev_time if self.prev_time is not None else 0.5
 
-        x_d_err = self.Kd[0, 0] * np.derivative(x_err, self.prev_x_err) if self.prev_x_err is not None else 0.0
-        y_d_err = self.Kd[1, 1] * np.derivative(y_err, self.prev_yaw_err) if self.prev_yaw_err is not None else 0.0
+        x_d_err = self.Kd[0, 0] * ((x_err - self.prev_x_err) / dt) if self.prev_x_err is not None else 0.0
+        y_d_err = self.Kd[1, 1] * ((y_err - self.prev_yaw_err) / dt) if self.prev_yaw_err is not None else 0.0
 
-        self.prev_x_err = self.x_i_err + x_d_err
-        self.prev_yaw_err = self.yaw_i_err + y_d_err
-        self.x_i_err += x_err
-        self.yaw_i_err += y_err
+        # Integrate using dt
+        self.x_i_err += x_err * dt
+        self.yaw_i_err += y_err * dt
 
-        
-        # TODO: Generate control command from error terms 
+        # Save current as previous for next loop
+        self.prev_x_err = x_err
+        self.prev_yaw_err = y_err
+        self.prev_time = now
+
+        # Generate control command from PID terms
         control_cmd = Twist()
-        control_cmd.linear.x = x_err + self.yaw_i_err + self.Kd[0, 0] * (x_err - self.prev_x_err if self.prev_x_err is not None else 0)
-        control_cmd.angular.z = y_err + self.yaw_i_err + self.Kd[1, 1] * (y_err - self.prev_yaw_err if self.prev_yaw_err is not None else 0)
-        
+        control_cmd.linear.x = x_err + self.Ki[0, 0] * self.x_i_err + x_d_err
+        control_cmd.angular.z = y_err + self.Ki[1, 1] * self.yaw_i_err + y_d_err
+
         self.pub.publish(control_cmd)
   
 
@@ -115,7 +121,7 @@ class TurtleBotController(Node):
     def planning_callback(self, msg: PointStamped):
         if self.trajectory:
             return
-        self.trajectory = plan_curved_trajectory(...)
+        self.trajectory = plan_curved_trajectory((msg.point.x, msg.point.y))
         self.traj_index = 0
         self.x_i_err = 0.0
         self.yaw_i_err = 0.0
