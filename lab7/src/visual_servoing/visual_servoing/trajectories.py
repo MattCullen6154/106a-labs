@@ -229,9 +229,10 @@ class LinearTrajectory(Trajectory):
             # For the second half of the trajectory, maintain a constant acceleration
             # Hint: Calculate the remaining distance to the goal position.
 
-            # added term:  self.acceleration * self.t_half * (t - self.t_half) * self.unit_direction
-            pos = self.start_position + np.abs(self.goal_position-self.start_position)/2 - 0.5 * self.acceleration  * (t - self.t_half)**2 * self.unit_direction + self.acceleration * self.t_half * (t - self.t_half) * self.unit_direction
-
+            
+            dt = t - self.t_half
+            half_distance = self.start_position + 0.5 * self.distance * self.unit_direction
+            pos = half_distance + self.v_max * dt * self.unit_direction - 0.5 * self.acceleration * dt**2 * self.unit_direction
         # Combine position and orientation
         return np.concatenate([pos, self.orientation])
 
@@ -329,16 +330,25 @@ class CircularTrajectory(Trajectory):
             # TODO: calculate the ANGLE of the end effector at time t,
             # For the first half of the trajectory, maintain a constant acceleration
 
-            theta = self.total_angle - 0.5 * self.angular_acceleration * t**2
-            pos = self.center_position + self.radius * np.array([np.cos(theta), np.sin(theta), 0])
+
+
+            theta = 0.5 * self.angular_acceleration * t**2
+            #pos = self.center_position + self.radius * np.array([np.cos(theta), np.sin(theta), 0])
         else:
             # TODO: Calculate the ANGLE of the end effector at time t,
             # For the second half of the trajectory, maintain a constant acceleration
             # Hint: Calculate the remaining angle to the goal position.
 
-            theta = self.total_angle - 0.5 * self.angular_acceleration * (t - self.t_half)**2
+            """
+            pos = self.start_position + 
+            np.abs(self.goal_position-self.start_position)/2 - 0.5 * self.acceleration  * (t - self.t_half)**2 * self.unit_direction + 
+            self.acceleration * self.t_half * (t - self.t_half) * self.unit_direction
+            """
+            dt = t - self.t_half
+            theta_half = 0.5 * self.angular_acceleration * self.t_half**2
+            theta = theta_half + self.angular_v_max * dt - 0.5 * self.angular_acceleration * dt**2
 
-            pos = self.center_position - self.radius * np.array([np.cos(theta), np.sin(theta), 0])
+        pos = self.center_position + self.radius * np.array([np.cos(theta), np.sin(theta), 0.0])
 
         # Combine position and orientation
         return np.concatenate([pos, self.orientation])
@@ -372,9 +382,10 @@ class CircularTrajectory(Trajectory):
         else:
             # TODO: start slowing the ANGULAR velocity down from the maximum one
             # For the second half of the trajectory, maintain a constant deceleration
-
-            theta = self.total_angle + 0.5 * self.angular_acceleration * (t - self.t_half)**2
-            theta_dot = -(self.angular_v_max - self.angular_acceleration * (t - self.t_half))
+            dt = t - self.t_half
+            theta_half = 0.5 * self.angular_acceleration * self.t_half**2
+            theta = theta_half + self.angular_v_max * dt - 0.5 * self.angular_acceleration * dt**2
+            theta_dot = self.angular_v_max - self.angular_acceleration * dt
 
         vel = self.radius * theta_dot * np.array([-np.sin(theta), np.cos(theta), 0])
 
